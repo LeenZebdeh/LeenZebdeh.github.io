@@ -157,7 +157,7 @@ Score Based Methods (NeurIPS: <a href="https://score-based-methods-workshop.gith
     + [Core Contributors](#core-contributors)
   * [License](#license)
 
-## Getting started
+## Getting started here
 
 Want to learn more about Jekyll? Check out [this tutorial](https://www.taniarascia.com/make-a-static-website-with-jekyll/).
 Why Jekyll? Read [Andrej Karpathy's blog post](https://karpathy.github.io/2014/07/01/switching-to-jekyll/)!
