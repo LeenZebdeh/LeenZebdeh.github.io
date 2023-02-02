@@ -2,18 +2,18 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Leen Alzebdeh
     - name: Date of Birth
-      value: 14th March 1879
+      value: 22 March 2002
     - name: Languages
-      value: English, German
+      value: English, Arabic
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Bachelor of Science, Specialization in Computing Science
+      institution: University of Alberta, Edmonton, Alberta
+      year: 2019-2024
       description:
         - Description 1.
         - Description 2.
@@ -21,32 +21,24 @@
           contents:
             - Sub-description 1.
             - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Frontend Developer
+      institution: Zero RampUp
+      year: Sep 2022 - Dec 2022
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Worked in a team of 7 and maintained, developed, and designed a subscription-based website using JavaScript (ReactJS with ES6).
+        - Worked in an Agile environment with weekly stand-ups and conducted 2 hours of sprint planning per week.
+        - Created a custom React Hook, which handles asynchronous data retrieval from REST API, to display subscriptions.
+        - Pair programmed with 3 frontend developers and reviewed the team’s code to ensure quality.
+    - title: Tutor
+      institution: Paper Edu, Remote
+      year: 2020 - Present
       description:
-        - Description 1.
-        - Description 2.
+        - Tutor K-12 students in computer science and mathematics, earning an average of 94% positive reviews.
+        - Provide code review for computer science students in Java, Python, C and JavaScript.
 
     - title: Director
       institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
