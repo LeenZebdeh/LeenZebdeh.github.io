@@ -38,7 +38,7 @@ jobs:
         echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
     - name: Fix permission
       run: yes |  chmod a+x bin/*
-        git commit -am "add execute permission to bin/deploy"
+        git commit -m "add execute permission to bin/deploy"
     - name: Deploy website 
       run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
                     --src ${{ steps.setup.outputs.SRC_BRANCH }} 
