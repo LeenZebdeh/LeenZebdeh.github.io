@@ -2,7 +2,7 @@
 layout: page
 title: Semantic Image Segmentation on MNISTDD-RGB
 description: a project where I apply semantic segmentation on digits.
-img: assets/img/11.jpg
+img: assets/img/4.jpg
 importance: 1
 category: CMPUT 328 - Machine Vision
 ---

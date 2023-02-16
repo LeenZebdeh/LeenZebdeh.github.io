@@ -2,7 +2,7 @@
 layout: page
 title: Object Detection on MNISTDD-RGB
 description: a project where I detect digit objects from a double-digit dataset.
-img: assets/img/12.jpg
+img: assets/img/2.jpg
 importance: 1
 category: CMPUT 328 - Machine Vision
 ---
@@ -17,9 +17,6 @@ I customized a YOLOv5 model to do object detection on the MNIST Double Digits RG
     MNIST Double Digits RGB Dataset Sample.
 </div>
 <div class="row justify-content-md-center">
-    <div class="col-3 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/12.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
     <div class="col-3 mt-3 mt-md-0">
         {% include figure.html path="assets/img/13.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
