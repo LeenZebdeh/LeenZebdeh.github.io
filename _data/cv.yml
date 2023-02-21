@@ -16,7 +16,7 @@
       year: 2020-2024
     - title: Bachelor of Science, Specialization in Physics
       institution: University of Alberta, Edmonton, Alberta
-      year: 2020-2012
+      year: 2020-2019
 
 - title: Experience
   type: time_table
@@ -52,7 +52,38 @@
         - Presented the results of the research to a 30+ person audience and answered questions.
         - Achieved duties 1 week ahead of the deadline and took initiative to advise another team.
 
-- title: Academic Interests and hobbies
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: CMPUT 401 - Software Process and Product Management
+      items: 
+        - Practiced best practices in software project and product development.
+    - title: CMPUT 328 - Visual Recognition
+      items:
+        - Implemented supervised and unsupervised machine learning principles, such as Autoencoders, LTSM,
+          and unsupervised domain adaptation.
+    - title: CMPUT 291- File and Database Management
+      items: 
+        - Explored entity-relationship model; relational model, and implemented projects in SQL, and
+          MongoDB.
+    - title: CMPUT 366 - Introduction to Artificial Intelligence
+      items: 
+        - Implemented a Q-learning algorithm to solve a maze problem.
+        - Explored algorithms to solve deterministic shortest path problems, such as A*, heuristic depth search,  and branch and bound.
+    - title: CMPUT 204 - Algorithms I
+      items: 
+        - Explored and implemented many searching, sorting, and graph algorithms.
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Machine learning
+    - title: Deep-learning-based machine vision.
+    - title: Best software practices
+    - title: Mobile robotics.
+
+- title: Other Interests
   type: list
   contents:
     - <u>Hobbies:</u> Cooking new cuisines (currently Korean), reading (Life 3.0 by Max Tegmark at the moment), sketching.
+
