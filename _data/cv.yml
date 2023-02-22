@@ -78,8 +78,8 @@
   type: nested_list
   contents:
     - title: Machine learning
+    - title: Best software development practices
     - title: Deep-learning-based machine vision.
-    - title: Best software practices
     - title: Mobile robotics.
 
 - title: Other Interests
