@@ -1,12 +1,27 @@
 ---
 layout: page
 title: Semantic Image Segmentation on MNISTDD-RGB
-description: a project where I apply semantic segmentation on digits.
-img: assets/img/4.jpg
+description: A project where I use semantic segmentation (U-NET) on double digit MNIST RGB.
+
+[Link to the GitHub repo](https://github.com/Leen-Alzebdeh/YOLOv5-UNet-Double-MNIST/tree/main/Image%20Segmentation)
+img: assets/img/11.jpg
 importance: 1
-category: CMPUT 328 - Machine Vision
+category: CMPUT 328 - Visual Recognition
 ---
-Customized a U-Net model to do object segmentation on the MNIST Double Digits RGB (MNISTDD-RGB) dataset and achieved a 97% accuracy.
+
+<br><b>Summary</b><br>
+I customize U-Net on a MNIST Double Digits RGB (MNISTDD-RGB) for a train-valid-test split dataset which was provided from CMPUT 328.
+
+Dataset consists of:
+
+<ul>
+<li>input: numpy array of numpy arrays which each represent pixels in the image, shape: number of samples, 12288 (flattened 64x64x3 images)</li>
+<li>output:</li>
+<ul>
+<li>segementations: numpy array of numpy arrays which each represents the labels in the corresponding image, shape: number of samples, 4096 (flattened 64x64)</li>
+</ul></ul>
+
+I customized a U-Net model for image segmentation. I achieve an accuracy of 87%.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
@@ -25,3 +40,9 @@ Customized a U-Net model to do object segmentation on the MNIST Double Digits RG
     I apply semantic segmentation where the background is black and each is colored.
 </div>
 
+<br><b>References</b><br>
+
+(2017).Pytorch-Unet, from https://github.com/milesial/Pytorch-UNet<br>
+
+I used CMPUT 328's code templates from: <br>
+Assignment 8: Image Segmentation/predict.py from A8_submission and Image Segmentation/predict.py from A8_main

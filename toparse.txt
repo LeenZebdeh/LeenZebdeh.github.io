@@ -1,0 +1,9 @@
+Reference lane following and apriltag detection nodes solutions on Eclass
+
+detectron2 Github: https://github.com/facebookresearch/detectron2
+
+detectron2 Colab notebook: https://github.com/facebookresearch/detectron2
+
+detectron2 output format: https://detectron2.readthedocs.io/tutorials/models.html#model-output-format
+
+Notes about differential drive kinematics from eclass.
