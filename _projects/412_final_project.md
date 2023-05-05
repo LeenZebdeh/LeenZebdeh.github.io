@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Computer Vision for Robotics 🦆🦆🦆
+title: Computer Vision for Robotics 🦆🦆🦆🦆🦆🦆
 importance: 1
-description: 
-SUMMARY
-[Link to the GitHub repo](https://github.com/Leen-Alzebdeh/duckietown/tree/main/final_project)
+description: Autonomous Driving in Duckietown
 category: CMPUT 412 - Robotics 🦆
 ---
+
+[Link to the GitHub repo](https://github.com/Leen-Alzebdeh/duckietown/tree/main/final_project)
 
 <br><b> Contributers </b> <br>
 Leen Alzebdeh, Tural Bakhtiyarli and Tianming Han

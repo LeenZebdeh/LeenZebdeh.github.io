@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of my cool projects.
 nav: true
 nav_order: 2
-display_categories: [CMPUT 412 - Robotics 🦆, CMPUT 328 - Machine Vision, CMPUT 301 - Habit Tracker]
+display_categories: [CMPUT 412 - Robotics 🦆, CMPUT 328 - Visual Recognition, CMPUT 301 - Habit Tracker]
 horizontal: false
 ---
 
