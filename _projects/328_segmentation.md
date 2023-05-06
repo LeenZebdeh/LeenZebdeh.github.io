@@ -9,7 +9,8 @@ category: CMPUT 328 - Visual Recognition
 
 [Link to the GitHub repo](https://github.com/Leen-Alzebdeh/YOLOv5-UNet-Double-MNIST/tree/main/Image%20Segmentation)
 
-<br><b>Summary</b><br>
+## Summary
+
 I customize U-Net on a MNIST Double Digits RGB (MNISTDD-RGB) for a train-valid-test split dataset which was provided from CMPUT 328.
 
 Dataset consists of:
@@ -39,7 +40,6 @@ I customized a U-Net model for image segmentation. I achieve an accuracy of 87%.
 <div class="caption">
     I apply semantic segmentation where the background is black and each is colored.
 </div>
-
 
 ## References
 

@@ -11,15 +11,15 @@ category: CMPUT 412 - Robotics 🦆
 <br><b> Contributers </b> <br>
 Leen Alzebdeh, Tural Bakhtiyarli and Tianming Han
 
-<b>Summary</b><br>
+## Summary
 
 SUMMARY
 
-<b> Objective </b> <br>
+## Objective
 
 <p> In this project, we have three separate tasks for the robot to complete in one go. To solve these tasks we would like to implement Apriltag detection, obstacle avoidance and object detection. The robot will follow the lane and handle intersections in stage 1, avoid a broken robot in the middle of the road in stage 2 and park inside one of the four parking slots specified in advance in stage 3. </p>
 
-<b> Methods and Results </b> <br>
+## Methods and Results
 
 Here is a video of our best run recorded by Tural on my robot, completing all three stages of the project:
 
@@ -34,7 +34,7 @@ Here is a video of our best run recorded by Tural on my robot, completing all th
 In this run, the duckiebot drives autonomously and completes the three tasks in the project. We can see it successfully follows its lane on stage 1, detects and waits for ducks in the crosswalks as well as avoids the broken robots in stage 2 and parks autonomously inside the target stall (specified as 4 before the program starts running) in the stage 3. 
 </div>
 
-<b> Stage 1: Apriltag Detection and Lane Following </b> <br>
+### Stage 1: Apriltag Detection and Lane Following
 
 <p> For this stage, we need to go into a circular driveway and come out at the other side of the road. The Apriltag at the entry intersection will indicate whether we turn straight or turn right into the circular driveway, and the two cases are placed randomly for each run.
 
@@ -44,7 +44,7 @@ A challenge we faced in this part is that the robot sometimes starts the lane fo
 
 However, we overlook another issue at the end, which is that with the same parameters, the lane following package would work differently on each of our robots. This is because in development we only work on our own robot on the part assigned to each of us. As a result, the lane following in part one only works well on Tianming's robot, sometimes fails on Leen's robot. And on Tural's robot the lane following fails more catastrophically: the driving speed seems to be quite slow compared to when running on the other robots and the robot is not able to make a good turn at the first intersection. </p>
 
-<b> Stage 2: Obstacle Avoidance </b> <br>
+### Stage 2: Obstacle Avoidance
 
 <p>Now in the second stage, our robot will need to cross two crosswalks and go around a broken duckiebot. In one of the two crosswalks, there may be a few ducks in the middle of the road passing, and we want to avoid it hitting the ducks in the case they are on the crosswalk.
 
@@ -64,7 +64,8 @@ With the model set up inside the docker, we receive images from camera_node and 
 
 We program our robot to temporarily switch to English driver mode to go around the broken robot. The result is tested on Leen's robot, which seems to work fine after a bit of parameter tuning E.g. slowing down the robot to allow for more detection time. We also discovered that the detection rate seems to go up significantly when the laptop is plugged into the wall, as the CPU runs faster as it gets a sufficient power supply. The image detection processing rate ends up at around one to two images per second.</p>
 
-<br><b>Stage 3: The Parking Lot</b><br>
+### Stage 3: The Parking Lot
+
 In this stage, we are tasked to park the robot in the desired parking slot. There were 4 parking slots: 1 and 2 on the left side of the entrance to the parking slot, and 3 and 4 on the right. We separated this problem into 2 main parts:
 
 <ol>
@@ -105,9 +106,10 @@ As we weren’t precise when turning towards the helper slot, we had to make up 
 
 In most of the tests, our program would park perfectly between the yellow lanes of each parking slot. However, sometimes it would touch the yellow lane, but park in the desired location, which was the main goal of this task.
 
-<br><b> References </b> <br>
+## References
+
 Reference lane following and apriltag detection nodes solutions on Eclass<br>
-detectron2 Github: https://github.com/facebookresearch/detectron2<br>
-detectron2 Colab notebook: https://github.com/facebookresearch/detectron2<br>
-detectron2 output format: https://detectron2.readthedocs.io/tutorials/models.html#model-output-format<br>
+detectron2 Github: [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)<br>
+detectron2 Colab notebook: [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)<br>
+detectron2 output format: [https://detectron2.readthedocs.io/tutorials/models.html#model-output-format](https://detectron2.readthedocs.io/tutorials/models.html#model-output-format)<br>
 Notes about differential drive kinematics from eclass.<br>
