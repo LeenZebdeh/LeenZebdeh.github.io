@@ -22,10 +22,10 @@
   type: time_table
   contents:
     - title: Frontend Developer
-      institution: Zero RampUp, Edmonton, Alberta
+      institution: Zero RampUp, Remote
       year: Sep 2022 - Dec 2022
       description:
-        - Worked in a team of 7 and maintained, developed, and designed a subscription-based website using JavaScript (ReactJS with ES6).
+        - Worked in a team of 7 and maintained, developed, and designed a subscription website using JavaScript (React with ES6).
         - Worked in an Agile environment with weekly stand-ups and conducted 2 hours of sprint planning per week.
         - Created a custom React Hook, which handles asynchronous data retrieval from REST API, to display subscriptions.
         - Pair programmed with 3 frontend developers and reviewed the team’s code to ensure quality.
@@ -47,31 +47,62 @@
       institution: University of Alberta, Edmonton, Alberta
       year: Jul 2018 - Aug 2018
       description:
-        - Conducted a 6-week research project, in collaboration with an intern and a team of graduate students, to optimize the performance of a program that simulates the boardgame Hex, mainly through refactoring and rewriting existing code. 
-        - Implemented and learned Python and graph search algorithms at a rapid pace to participate in the program.
+        - Conducted a 6-week research project, in collaboration with an intern and a team of graduate students, to optimize the performance of a program that simulates the boardgame Hex, mainly through refactoring and rewriting existing code.
         - Presented the results of the research to a 30+ person audience and answered questions.
         - Achieved duties 1 week ahead of the deadline and took initiative to advise another team.
-
-- title: Academic Interests
+- title: Projects
+  type: time_table
+  contents:
+    - title: Autonomous Robot Driving Using Robot Operating System (ROS)
+      institution: CMPUT 466
+      year: Winter 2023
+      description:
+        - Wrote ROS packages to make an autonomous driving robot (Duckiebot) on miniature roads, using image processing to drive parallel to yellow road lines.
+        - Trained a deep learning model (detectron2), in TensorFlow, on a custom dataset of images of rubber ducks and other Duckiebots, in order to detect these objects and avoid crashing into them while driving.
+    - title: Semantic Image Segmentation on MNISTDD-RGB
+      institution: CMPUT 328
+      year: Fall 2022
+      description:
+        - Customized a U-Net model for image segmentation on the MNIST Double Digits RGB dataset and achieved 86% accuracy.
+    - title: Linear Regression, Neural Networks, and Support Vector Machine (SVM) to Predict Edmonton's daily weather
+      institution: CMPUT 466
+      year: Winter 2023
+      description: >
+        -	I implemented three machine learning algorithms: linear regression, neural networks, support vector machine (SVM) to predict temperature and precipitation. I trained on Edmonton's daily weather dataset.
+    - title: Django Backend Developer
+      institution: CMPUT 404
+      year: Winter 2023
+      description:
+        - Worked in a team of 5 to create a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web server.
+        - Was responsible for building the app’s backend and for linking our API with other teams’ APIs.
+        - Wrote automatic unit test scripts in Django to validate new code functionality.
+    - title: Android Developer
+      institution: CMPUT 301
+      year: Fall 2021
+      description:
+        - Worked in a team to create a fully functional social media app using Java, XML and Cloud Firestore.
+        - Implemented a map, to share a post’s location, with address search and selection using Geolocation API.
+        - Used JUnit to build unit testing that prevents bugs and dramatically improved code quality.
+- title: Relevant Courses
   type: nested_list
   contents:
     - title: CMPUT 401 - Software Process and Product Management
-      items: 
+      items:
         - Practiced best practices in software project and product development.
     - title: CMPUT 328 - Visual Recognition
       items:
         - Implemented supervised and unsupervised machine learning principles, such as Autoencoders, LTSM,
           and unsupervised domain adaptation.
     - title: CMPUT 291- File and Database Management
-      items: 
+      items:
         - Explored entity-relationship model; relational model, and implemented projects in SQL, and
           MongoDB.
     - title: CMPUT 366 - Introduction to Artificial Intelligence
-      items: 
+      items:
         - Implemented a Q-learning algorithm to solve a maze problem.
         - Explored algorithms to solve deterministic shortest path problems, such as A*, heuristic depth search,  and branch and bound.
     - title: CMPUT 204 - Algorithms I
-      items: 
+      items:
         - Explored and implemented many searching, sorting, and graph algorithms.
 
 - title: Academic Interests
@@ -86,4 +117,3 @@
   type: list
   contents:
     - <u>Hobbies:</u> Cooking new cuisines (currently Korean), reading (Life 3.0 by Max Tegmark at the moment), sketching.
-

@@ -12,7 +12,7 @@ category: CMPUT 404 - Web Applications and Architecture
 
 The web is fundamentally interconnected and peer to peer. In this course, each team creates its own app with its own API. We created ours and we linked with two other teams' APIs in order to connect our apps with theirs.
 
-We built the frontend in React, and the backend in Django. I was responsible for creating the backend for the app and for linking with other teams' APIs.
+In a team of 5, we built the frontend in React, and the backend in Django. I was responsible for creating the backend for the app and for linking with other teams' API.
 
 ## Description
 
