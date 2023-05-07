@@ -2,7 +2,7 @@
 layout: page
 title: Autonomous Driving in Duckietown 🦆🦆🦆🦆🦆🦆
 importance: 1
-description: SUMMARU
+description: I implement autonomous driving, obstacle avoidence and parking in Duckietown.
 category: CMPUT 412 - Robotics 🦆
 ---
 
@@ -94,7 +94,7 @@ In most of the tests, our program would park perfectly between the yellow lanes 
 
 ## References
 
-Reference lane following and apriltag detection nodes solutions on Eclass<br>
+Reference lane following and AprilTag detection nodes solutions on Eclass<br>
 detectron2 Github: [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)<br>
 detectron2 Colab notebook: [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)<br>
 detectron2 output format: [https://detectron2.readthedocs.io/tutorials/models.html#model-output-format](https://detectron2.readthedocs.io/tutorials/models.html#model-output-format)<br>
