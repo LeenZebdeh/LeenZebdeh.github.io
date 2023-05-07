@@ -91,8 +91,7 @@
         - Practiced best practices in software project and product development.
     - title: CMPUT 328 - Visual Recognition
       items:
-        - Implemented supervised and unsupervised machine learning principles, such as Autoencoders, LTSM,
-          and unsupervised domain adaptation.
+        - Implemented supervised and unsupervised machine learning methods, such as Autoencoders, LTSM, and unsupervised domain adaptation
     - title: CMPUT 291- File and Database Management
       items:
         - Explored entity-relationship model; relational model, and implemented projects in SQL, and
