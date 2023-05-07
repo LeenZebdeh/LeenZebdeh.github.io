@@ -8,7 +8,7 @@ category: CMPUT 412 - Robotics 🦆
 
 [Link to the GitHub repo](https://github.com/Leen-Alzebdeh/duckietown/tree/main/final_project)
 
-<br><b> Contributors </b> <br>
+<b> Contributors </b> <br>
 Leen Alzebdeh, Tural Bakhtiyarli and Tianming Han
 
 
