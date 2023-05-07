@@ -12,7 +12,7 @@ category: CMPUT 404 - Web Applications and Architecture
 
 The web is fundamentally interconnected and peer to peer. In this course, each team creates its own app with its own API. We created ours and we linked with two other teams' APIs in order to connect our apps with theirs.
 
-We built the frontend in React, and the backend in Django. I was responsible for creating the backend for the app and for linking with other teams' API.
+We built the frontend in React, and the backend in Django. I was responsible for creating the backend for the app and for linking with other teams' APIs.
 
 ## Description
 
@@ -22,7 +22,7 @@ This blogging/social network platform will allow the importing of other sources 
 
 An author sitting on one server can aggregate the posts of their friends on other teams' servers.
 
-We are going to go with an inbox model where by you share posts to your friends by sending them your posts, similar to [activity pub]()https://www.w3.org/TR/activitypub/).
+We are going to go with an inbox model where by you share posts to your friends by sending them your posts, similar to [activity pub](https://www.w3.org/TR/activitypub/).
 
 <div class = "row justify-content-md-center">
     <video width="320" height="240" controls>

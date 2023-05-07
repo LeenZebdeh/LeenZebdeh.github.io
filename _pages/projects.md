@@ -7,9 +7,9 @@ nav: true
 nav_order: 2
 display_categories:
   [
+    CMPUT 404 - Web Applications and Architecture,
     CMPUT 412 - Robotics 🦆,
     CMPUT 328 - Visual Recognition,
-    CMPUT 404 - Web Applications and Architecture,
     CMPUT 301 - Habit Tracker,
   ]
 horizontal: false
