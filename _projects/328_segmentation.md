@@ -2,7 +2,7 @@
 layout: page
 title: Semantic Image Segmentation on MNISTDD-RGB
 description: A project where I customize U-Net for semantic segmentation on double digit MNIST RGB.
-img: assets/img/11.jpg
+img: assets/img/4.jpg
 importance: 1
 category: CMPUT 328 - Visual Recognition
 ---
