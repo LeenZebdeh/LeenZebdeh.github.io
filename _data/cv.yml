@@ -68,7 +68,7 @@
       institution: CMPUT 466
       year: Winter 2023
       description: >
-        -	I implemented three machine learning algorithms: linear regression, neural networks, support vector machine (SVM) to predict temperature and precipitation. I trained on Edmonton's daily weather dataset.
+        I implemented three machine learning algorithms: linear regression, neural networks, support vector machine (SVM) to predict temperature and precipitation. I trained on Edmonton's daily weather dataset.
     - title: Django Backend Developer
       institution: CMPUT 404
       year: Winter 2023
