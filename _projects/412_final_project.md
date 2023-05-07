@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Computer Vision for Robotics 🦆🦆🦆🦆🦆🦆
+title: Autonomous Driving in Duckietown 🦆🦆🦆🦆🦆🦆
 importance: 1
-description: Autonomous Driving in Duckietown
+description: I implement autonomous driving, obstacle avoidence and parking in Duckietown.
 category: CMPUT 412 - Robotics 🦆
 ---
 
@@ -76,11 +76,11 @@ The initial idea for taking position was to go certain distance after entering t
 <ul>
 <li>Travelling certain distance:</li>
 
-We knew that the parking slots 2 and 4 were closer to the entrance than the parking slots 1 and 3. We used this information to travel a certain distance after determining which parking slot was the target. For parking in slot 2 or 4, we would travel 0.25 meters from the entrance. For parking in slot 1 or 3, we would travel 0.5 meters. However, we saw that these constants weren’t very reliable as the robot would not stop at an exact location before entering the parking lot. Therefore, we started calculating the distance from the robot to the apriltag that was facing the entrance of the parking lot, but the idea for travelling a certain distance for each slot would remain the same.
+We knew that the parking slots 2 and 4 were closer to the entrance than the parking slots 1 and 3. We used this information to travel a certain distance after determining which parking slot was the target. For parking in slot 2 or 4, we would travel 0.25 meters from the entrance. For parking in slot 1 or 3, we would travel 0.5 meters. However, we saw that these constants weren’t very reliable as the robot would not stop at an exact location before entering the parking lot. Therefore, we started calculating the distance from the robot to the AprilTag that was facing the entrance of the parking lot, but the idea for travelling a certain distance for each slot would remain the same.
 
 <li>Calculating the distance to target:</li>
 
-After travelling a certain distance, we would need to turn 90 degrees towards the target slot. For turning, we were using opposite values of velocity for each wheel so that the robot would turn on its axis. Also, to determine the angle it has turned, we would use the kinematics of differential drive that we have learned from the class. After this, we would calculate the distance to the apriltag. However, this value would be similar for all of the parking slots. Therefore, to save time, we stopped calculating the distance to the target for each run, and just did it once and used it as a constant for every run. This way, we wouldn’t have to turn towards the target slot at all.
+After travelling a certain distance, we would need to turn 90 degrees towards the target slot. For turning, we were using opposite values of velocity for each wheel so that the robot would turn on its axis. Also, to determine the angle it has turned, we would use the kinematics of differential drive that we have learned from the class. After this, we would calculate the distance to the AprilTag. However, this value would be similar for all of the parking slots. Therefore, to save time, we stopped calculating the distance to the target for each run, and just did it once and used it as a constant for every run. This way, we wouldn’t have to turn towards the target slot at all.
 
 <li>Turning towards the helper slot:</li>
 <ul>
@@ -90,17 +90,17 @@ We would apply the same kinematics to turn towards the helper slot as we used in
 
 <li>Making it more precise:</li>
 
-To make facing the helper slot more precise, we decided to use the translation vector to align the robot with the apriltag of the helper slot and then go backward. We were trying to achieve this by making very small angle turns using the sign of the x value of the translation matrix. Nevertheless, the issue of small offset of angle would occur again and cause the robot to park in the wrong parking slot. Another obstacle that we were facing was that the robot didn’t have the capability of making small turns: If we gave the velocity too low, the robot would sometimes stop moving as it didn’t have enough power to turn in its place; If we gave the velocity too high, the robot would turn too much and cause the robot to enter the loop of turning too much to the left of the apriltag, then turning too much to the right. We tried to fix this problem by using the x value of the translation matrix for the amount of angle it has to turn towards the apriltag. To be more precise, we started using x/3 when turning so that the value of x will decrease to 0 eventually after making small x/3 turns. However, the issue of overturning, or not being able to turn was still there.
+To make facing the helper slot more precise, we decided to use the translation vector to align the robot with the AprilTag of the helper slot and then go backward. We were trying to achieve this by making very small angle turns using the sign of the x value of the translation matrix. Nevertheless, the issue of small offset of angle would occur again and cause the robot to park in the wrong parking slot. Another obstacle that we were facing was that the robot didn’t have the capability of making small turns: If we gave the velocity too low, the robot would sometimes stop moving as it didn’t have enough power to turn in its place; If we gave the velocity too high, the robot would turn too much and cause the robot to enter the loop of turning too much to the left of the AprilTag, then turning too much to the right. We tried to fix this problem by using the x value of the translation matrix for the amount of angle it has to turn towards the AprilTag. To be more precise, we started using x/3 when turning so that the value of x will decrease to 0 eventually after making small x/3 turns. However, the issue of overturning, or not being able to turn was still there.
 
 <li>Final idea:</li>
 
-In the end, we decide to not be very precise when facing the helper slot, and make up for this by taking into the consideration the x_value of the translation matrix that we would receive from the apriltag of the helper slot when we were backing to the target slot. So, we would approximately do 90 degrees turn towards the helper slot and start to go backwards.
+In the end, we decide to not be very precise when facing the helper slot, and make up for this by taking into the consideration the x_value of the translation matrix that we would receive from the AprilTag of the helper slot when we were backing to the target slot. So, we would approximately do 90 degrees turn towards the helper slot and start to go backwards.
 
 </ul>
 </ul>
 <li>Backing to the desired parking slot:</li>
 
-As we weren’t precise when turning towards the helper slot, we had to make up for it when backing. We made the wheels turn in the same direction, however, one faster than the other. First, we would find the sign of the x_value of the translation matrix to determine whether the robot is facing towards the right side of the apriltag of the helper slot, or the left. Then, we would decide which wheel should have higher velocity than the other using this information. For example: if the robot is facing towards the right side of the apriltag, then we would give the left wheel velocity the value of -(v_constant + abs(x)) and the right wheel the value of -(v_constant) when going backwards. The negative sign causes the robot to go backwards, and adding the absolute value of x to a certain wheel, would cause the robot to align itself towards the apriltag of the helper slot when going backwards, which would cause the robot to park in the target area. We also used the distance to the target slot when backing so that the robot would not hit the Apriltag in the target area.
+As we weren’t precise when turning towards the helper slot, we had to make up for it when backing. We made the wheels turn in the same direction, however, one faster than the other. First, we would find the sign of the x_value of the translation matrix to determine whether the robot is facing towards the right side of the AprilTag of the helper slot, or the left. Then, we would decide which wheel should have higher velocity than the other using this information. For example: if the robot is facing towards the right side of the AprilTag, then we would give the left wheel velocity the value of -(v_constant + abs(x)) and the right wheel the value of -(v_constant) when going backwards. The negative sign causes the robot to go backwards, and adding the absolute value of x to a certain wheel, would cause the robot to align itself towards the AprilTag of the helper slot when going backwards, which would cause the robot to park in the target area. We also used the distance to the target slot when backing so that the robot would not hit the Apriltag in the target area.
 
 </ol>
 
@@ -108,7 +108,7 @@ In most of the tests, our program would park perfectly between the yellow lanes 
 
 ## References
 
-Reference lane following and apriltag detection nodes solutions on Eclass<br>
+Reference lane following and AprilTag detection nodes solutions on Eclass<br>
 detectron2 Github: [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)<br>
 detectron2 Colab notebook: [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)<br>
 detectron2 output format: [https://detectron2.readthedocs.io/tutorials/models.html#model-output-format](https://detectron2.readthedocs.io/tutorials/models.html#model-output-format)<br>
