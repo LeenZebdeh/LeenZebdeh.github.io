@@ -73,7 +73,7 @@
       institution: CMPUT 404
       year: Winter 2023
       description:
-        - Worked in a team of 5 to create a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web server.
+        - Worked in a team of 5 to create a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers.
         - Was responsible for building the app’s backend and for linking our API with other teams’ APIs.
         - Wrote automatic unit test scripts in Django to validate new code functionality.
     - title: Android Developer
