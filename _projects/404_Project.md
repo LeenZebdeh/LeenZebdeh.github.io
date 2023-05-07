@@ -4,7 +4,7 @@ title: Semantic Image Segmentation on MNISTDD-RGB
 description: A project where I customize U-Net for semantic segmentation on double digit MNIST RGB.
 img: assets/img/4.jpg
 importance: 1
-category: CMPUT 328 - Visual Recognition
+category: CMPUT 404 - Web Applications and Architecture
 ---
 
 [Link to the GitHub repo](https://github.com/Leen-Alzebdeh/YOLOv5-UNet-Double-MNIST/tree/main/Image%20Segmentation)
