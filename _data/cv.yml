@@ -64,7 +64,7 @@
       year: Fall 2022
       description:
         - Customized a U-Net model for image segmentation on the MNIST Double Digits RGB dataset and achieved 86% accuracy.
-    - title: Linear Regression, Neural Networks, and Support Vector Machine (SVM) to Predict Edmonton's daily weather
+    - title: Linear Regression, Neural Networks, and Support Vector Machine (SVM) to Predict Edmonton's Daily Weather
       institution: CMPUT 466
       year: Winter 2023
       description: >

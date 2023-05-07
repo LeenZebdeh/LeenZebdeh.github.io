@@ -3,14 +3,13 @@ layout: page
 title: Autonomous Driving in Duckietown 🦆🦆🦆🦆🦆🦆
 importance: 1
 description: I implement autonomous driving, obstacle avoidence and parking in Duckietown.
-category: CMPUT 412 - Robotics 🦆
+category: CMPUT 412 - Experimental Mobile Robotics 🦆
 ---
 
 [Link to the GitHub repo](https://github.com/Leen-Alzebdeh/duckietown/tree/main/final_project)
 
 <b> Contributors </b> <br>
 Leen Alzebdeh, Tural Bakhtiyarli and Tianming Han
-
 
 ## Objective
 
