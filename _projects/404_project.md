@@ -10,13 +10,13 @@ category: CMPUT 404 - Web Applications and Architecture
 
 ## Summary
 
-The web is fundamentally interconnected and peer to peer. In this course, each team creates its own app with its own API. We created ours and we linked with two other teams' APIs in order to connect our apps with theirs.
+The web is fundamentally interconnected and peer to peer. In this course, each team creates their own app with their own API. We created ours and we linked with two other teams' APIs in order to connect our apps with theirs.
 
 In a team of 5, we built the frontend in React, and the backend in Django. I was responsible for creating the backend for the app and for linking with other teams' API.
 
 ## Description
 
-We build a similar, simpler version of [diaspora](https://diasporafoundation.org/)
+We build a similar, simpler version of [diaspora](https://diasporafoundation.org/).
 
 This blogging/social network platform will allow the importing of other sources of posts (github) as well allow the distributing sharing of posts and content.
 
