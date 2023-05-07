@@ -1,44 +1,35 @@
 ---
 layout: page
-title: Semantic Image Segmentation on MNISTDD-RGB
-description: A project where I customize U-Net for semantic segmentation on double digit MNIST RGB.
-img: assets/img/4.jpg
+title: Distributed Social Networking Web App
+description: I worked as a Django developer to build a social media app that links to other teams' APIs and aggregates activity from their webserver/ app.
 importance: 1
 category: CMPUT 404 - Web Applications and Architecture
 ---
 
-[Link to the GitHub repo](https://github.com/Leen-Alzebdeh/YOLOv5-UNet-Double-MNIST/tree/main/Image%20Segmentation)
+[Link to the GitHub repo](https://github.com/hbheesetti/CMPUT404-project-socialdistribution)
 
 ## Summary
 
-I customize U-Net on a MNIST Double Digits RGB (MNISTDD-RGB) for a train-valid-test split dataset which was provided from CMPUT 328.
+The web is fundamentally interconnected and peer to peer. In this course, each team creates its own app with its own API. We created ours and we linked with two other teams' APIs in order to connect our apps with theirs.
 
-Dataset consists of:
+We built the frontend in React, and the backend in Django. I was responsible for creating the backend for the app and for linking with other teams' API.
 
-<ul>
-<li>input: numpy array of numpy arrays which each represent pixels in the image, shape: number of samples, 12288 (flattened 64x64x3 images)</li>
-<li>output:</li>
-<ul>
-<li>segementations: numpy array of numpy arrays which each represents the labels in the corresponding image, shape: number of samples, 4096 (flattened 64x64)</li>
-</ul></ul>
+## Description
 
-I customized a U-Net model for image segmentation. I achieve an accuracy of 87%.
+We build a similar, simpler version of [diaspora](https://diasporafoundation.org/)
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+This blogging/social network platform will allow the importing of other sources of posts (github) as well allow the distributing sharing of posts and content.
+
+An author sitting on one server can aggregate the posts of their friends on other teams' servers.
+
+We are going to go with an inbox model where by you share posts to your friends by sending them your posts, similar to [activity pub]()https://www.w3.org/TR/activitypub/).
+
+<div class = "row justify-content-md-center">
+    <video width="320" height="240" controls>
+    <source src="../../assets/vid/404/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </div>
 <div class="caption">
-    MNIST Double Digits RGB Dataset Sample.
+    Demo of our app linking with other teams' apps. 
 </div>
-<div class="row justify-content-md-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/4.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    I apply semantic segmentation where the background is black and each is colored.
-</div>
-
-
