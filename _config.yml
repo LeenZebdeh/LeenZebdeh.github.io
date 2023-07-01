@@ -345,7 +345,7 @@ enable_progressbar:         true   # enables a horizontal progress bar linked to
 # -----------------------------------------------------------------------------
 # Library versions
 # -----------------------------------------------------------------------------
-
+ 
 academicons:
   version: "1.9.1"
   integrity: "sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg="
