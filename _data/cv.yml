@@ -25,31 +25,29 @@
       institution: Zero RampUp, Remote
       year: Sep 2022 - Dec 2022
       description:
-        - Worked in a team of 7 and maintained, developed, and designed a subscription website using JavaScript (React with ES6).
-        - Worked in an Agile environment with weekly stand-ups and conducted 2 hours of sprint planning per week.
-        - Created a custom React Hook, which handles asynchronous data retrieval from REST API, to display subscriptions.
-        - Pair programmed with 3 frontend developers and reviewed the team’s code to ensure quality.
+        - Collaborated in a 7-member team to develop and deploy a business website using JavaScript (React ES6).
+        - Utilized Agile methodology with weekly stand-ups and sprint planning.
+        - Developed custom React Hooks to facilitate seamless retrieval of asynchronous data from a REST API and dynamically update website components.
+        - Engaged in pair programming with frontend developers and conducted code reviews to ensure code quality.
     - title: Tutor
       institution: Paper Edu, Remote
       year: 2020 - Present
       description:
         - Tutor K-12 students in computer science and mathematics, earning an average of 94% positive reviews.
         - Provide code review for computer science students in Java, Python, C and JavaScript.
-
     - title: Street Team Member
       institution: Reverb Communications, Edmonton, Alberta
-      year: Jul 2022 - Sep 2022
+      year: Jul 2022 - Present
       description:
         - Established booths to educate the public on train-related safety ahead of the valley train line opening.
         - Engaged large audiences, reaching 80+ persons per hour regularly.
-
     - title: Intern
       institution: University of Alberta, Edmonton, Alberta
       year: Jul 2018 - Aug 2018
       description:
-        - Conducted a 6-week research project, in collaboration with an intern and a team of graduate students, to optimize the performance of a program that simulates the boardgame Hex, mainly through refactoring and rewriting existing code.
-        - Presented the results of the research to a 30+ person audience and answered questions.
-        - Achieved duties 1 week ahead of the deadline and took initiative to advise another team.
+        - Collaborated on a 6-week research project to optimize the performance of a program that simulates the board game Hex, mainly through refactoring and rewriting existing code.
+        - Presented the research findings to a 30+ person audience.
+        - Completed duties ahead of schedule and took initiative to advise another team.
 - title: Projects
   type: time_table
   contents:
@@ -57,8 +55,8 @@
       institution: CMPUT 466
       year: Winter 2023
       description:
-        - Wrote ROS packages to make an autonomous driving robot (Duckiebot) on miniature roads, using image processing to drive parallel to yellow road lines.
-        - Trained a deep learning model (detectron2), in TensorFlow, on a custom dataset of images of rubber ducks and other Duckiebots, in order to detect these objects and avoid crashing into them while driving.
+        - Developed ROS packages to enable a robot (Duckiebot) to autonomously navigate miniature roads using image processing to drive parallel to yellow road lines.
+        - Trained a TensorFlow-based deep learning model (detectron2) on a custom dataset of images to detect rubber ducks and other Duckiebots and avoid collision.
     - title: Semantic Image Segmentation on MNISTDD-RGB
       institution: CMPUT 328
       year: Fall 2022
@@ -68,27 +66,26 @@
       institution: CMPUT 466
       year: Winter 2023
       description: >
-        I implemented three machine learning algorithms: linear regression, neural networks, support vector machine (SVM) to predict temperature and precipitation. I trained on Edmonton's daily weather dataset.
+        Implemented linear regression, neural networks, support vector machine (SVM) algorithms to predict temperature and precipitation using Edmonton's daily weather dataset.
     - title: Django Backend Developer
       institution: CMPUT 404
       year: Winter 2023
       description:
-        - Worked in a team of 5 to create a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers.
-        - Was responsible for building the app’s backend and for linking our API with other teams’ APIs.
-        - Wrote automatic unit test scripts in Django to validate new code functionality.
+        - Contributed to a team of 5 to develop a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers.
+        - Built the app's backend, integrated APIs, and wrote unit tests in Django.
     - title: Android Developer
       institution: CMPUT 301
       year: Fall 2021
       description:
-        - Worked in a team to create a fully functional social media app using Java, XML and Cloud Firestore.
-        - Implemented a map, to share a post’s location, with address search and selection using Geolocation API.
-        - Used JUnit to build unit testing that prevents bugs and dramatically improved code quality.
+        - Collaborated in a team to create a social media Android app using Java, XML and Cloud Firestore.
+        - Implemented a map to share a post’s location, with address search and selection using Geolocation API.
+        - Employed JUnit for unit testing to enhance code quality and prevent bugs.
 - title: Relevant Courses
   type: nested_list
   contents:
     - title: CMPUT 401 - Software Process and Product Management
       items:
-        - Practiced best practices in software project and product development.
+        - Demonstrated best practices in software project and product development.
     - title: CMPUT 328 - Visual Recognition
       items:
         - Implemented supervised and unsupervised machine learning methods, such as Autoencoders, LTSM, and unsupervised domain adaptation
