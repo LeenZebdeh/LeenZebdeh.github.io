@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Data CLeaning Task
+title: Data Cleaning Task
 description: "We explore the use of regular expressions to clean input text in support of a downstream task."
 importance: 5
 category: CMPUT 461 - Introduction to Natural Language Processing (NLP)
