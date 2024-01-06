@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Data Cleaning Task
+title: Data Cleanig Task
 description: "We explore the use of regular expressions to clean input text in support of a downstream task."
 importance: 5
 category: CMPUT 461 - Introduction to Natural Language Processing (NLP)
@@ -13,7 +13,7 @@ We explore the use of regular expressions to clean input text in support of a do
 ## Data
 Input data: [Child Language Data Exchange System (CHILDES Talkbank)](https://childes.talkbank.org/)
 
-The data contains transcripts from oral language that represent the language that young children are exposed to in everyday settings. The data is stored in .cha files.
+The data contains transcripts from oral language that represent the language that young children are exposed to in everyday settings. The data is stored in .cha files. 
 ```
 NLP-Data-Cleaning-Task/
 ├─ Data/
