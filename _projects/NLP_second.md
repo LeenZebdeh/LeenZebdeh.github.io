@@ -3,7 +3,7 @@ layout: page
 title: Grammar Checker
 description: "We write a grammar and a parser to parse the POS tag sequence."
 importance: 4
-category: CMPUT 461 - Introduction to Natural Language Processing 
+category: CMPUT 461 - Introduction to Natural Language Processing (NLP)
 ---
 
 [Link to the GitHub repo](https://github.com/Leen-Alzebdeh/NLP-Grammar-Checker)
