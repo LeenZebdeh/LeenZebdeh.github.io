@@ -9,6 +9,7 @@ display_categories:
   [
     CMPUT 404 - Web Applications and Architecture,
     CMPUT 412 - Experimental Mobile Robotics 🦆,
+    CMPUT 461 - Introduction to Natural Language Processing (NLP),
     CMPUT 328 - Visual Recognition,
     CMPUT 466 - Machine Learning,
     CMPUT 301 - Habit Tracker,

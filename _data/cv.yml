@@ -25,7 +25,7 @@
       institution: Zero RampUp, Remote
       year: Sep 2022 - Dec 2022
       description:
-        - Collaborated in a 7-member team to develop and deploy a business website using JavaScript (React ES6).
+        - Collaborated in a 7-member team to develop and deploy a business website from scratch, using JavaScript.
         - Utilized Agile methodology with weekly stand-ups and sprint planning.
         - Developed custom React Hooks to facilitate seamless retrieval of asynchronous data from a REST API and dynamically update website components.
         - Engaged in pair programming with frontend developers and conducted code reviews to ensure code quality.
@@ -39,43 +39,54 @@
       institution: Reverb Communications, Edmonton, Alberta
       year: Jul 2022 - Present
       description:
-        - Established booths to educate the public on train-related safety ahead of the valley train line opening.
+        - Establish booths to educate the public on train-related safety ahead of the valley train line opening.
+        - Present and disseminate educational materials, proactively addressing inquiries to enhance public knowledge and adherence to train safety protocols.
         - Engaged large audiences, reaching 80+ persons per hour regularly.
     - title: Intern
       institution: University of Alberta, Edmonton, Alberta
       year: Jul 2018 - Aug 2018
       description:
         - Collaborated on a 6-week research project to optimize the performance of a program that simulates the board game Hex, mainly through refactoring and rewriting existing code.
-        - Presented the research findings to a 30+ person audience.
+        - Presented findings to an audience of over 30 peers, faculty, and industry professionals. This presentation highlighted key optimization strategies, demonstrated improved program performance metrics, and facilitated an interactive Q&A session to engage the audience and clarify complex technical concepts.
         - Completed duties ahead of schedule and took initiative to advise another team.
 - title: Projects
   type: time_table
   contents:
-    - title: Autonomous Robot Driving Using Robot Operating System (ROS)
-      institution: CMPUT 466
-      year: Winter 2023
+    - title: ROS Developer 
+      institution: Autonomous Robot Driving Using Robot Operating System (ROS)
+      year: Feb 2023 - Apr 2023
       description:
-        - Developed ROS packages to enable a robot (Duckiebot) to autonomously navigate miniature roads using image processing to drive parallel to yellow road lines.
-        - Trained a TensorFlow-based deep learning model (detectron2) on a custom dataset of images to detect rubber ducks and other Duckiebots and avoid collision.
-    - title: Semantic Image Segmentation on MNISTDD-RGB
-      institution: CMPUT 328
-      year: Fall 2022
+        - DContributed to a team of 5 to develop a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers.
+        - Built the app's backend, integrated APIs, and wrote unit tests in Django.
+        - Tools, Python, NLTK, Pandas.
+    - title: NLP Developer
+      institution: NLP-Based Relation Extraction & Classification
+      year: Nov 2021 - Dec 2021
+      description:
+        - Developing and optimizing a Naive Bayes classifier for NLP, focused on extracting and categorizing semantic relationships from text, utilizing advanced data preprocessing and evaluation techniques including 3-fold cross-validation on the FewRel dataset.
+        - Tools, Python, PyTorch, NumPy.
+    - title: Computer Vision Developer
+      institution: Semantic Image Segmentation on MNISTDD-RGB
+      year: Nov 2021 - Dec 2021
       description:
         - Customized a U-Net model for image segmentation on the MNIST Double Digits RGB dataset and achieved 86% accuracy.
-    - title: Linear Regression, Neural Networks, and Support Vector Machine (SVM) to Predict Edmonton's Daily Weather
-      institution: CMPUT 466
-      year: Winter 2023
-      description: >
-        Implemented linear regression, neural networks, support vector machine (SVM) algorithms to predict temperature and precipitation using Edmonton's daily weather dataset.
+        - Tools, Python, PyTorch, NumPy.
+    - title: Machine Learning Developer 
+      institution:  Linear Regression, Neural Networks and SVM to Predict Edmonton’s Weather
+      year: Mar 2023 – Apr 2023
+      description: 
+        - Implemented linear regression, neural networks, support vector machine (SVM) algorithms to predict temperature and precipitation using Edmonton's daily weather dataset.
+        - Tools, Python, Matplotlib, NumPy, TensorFlow, scikit-learn, sodapy.
     - title: Django Backend Developer
-      institution: CMPUT 404
-      year: Winter 2023
+      institution: Distributed Social Networking Web App
+      year: Jan 2023 – Apr 2023
       description:
         - Contributed to a team of 5 to develop a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers.
         - Built the app's backend, integrated APIs, and wrote unit tests in Django.
+        - Tools, Python, Django, React.
     - title: Android Developer
-      institution: CMPUT 301
-      year: Fall 2021
+      institution:  Habit Tracking App
+      year: Sep 2021 - Dec 2021
       description:
         - Collaborated in a team to create a social media Android app using Java, XML and Cloud Firestore.
         - Implemented a map to share a post’s location, with address search and selection using Geolocation API.
@@ -85,7 +96,8 @@
   contents:
     - title: CMPUT 401 - Software Process and Product Management
       items:
-        - Demonstrated best practices in software project and product development.
+        - Demonstrated best practices in software project and product development.   
+    - title: CMPUT 461 - Introduction to Natural Language Processing (NLP)
     - title: CMPUT 328 - Visual Recognition
       items:
         - Implemented supervised and unsupervised machine learning methods, such as Autoencoders, LTSM, and unsupervised domain adaptation
@@ -101,6 +113,15 @@
       items:
         - Explored and implemented many searching, sorting, and graph algorithms.
 
+- title: Volunteer Experience
+  type: nested_list
+  contents:
+    - title: Barista at The Carrot Community Arts Coffeehouse
+      items:
+        - Skillfully prepared beverages and fostered a warm, inviting atmosphere, enhancing community engagement at the coffeehouse.
+    - title: Art Booth Coordinator at The Works Art & Design Festival
+      items:
+        - Managed an art booth, presented artworks, and interactively engaged with visitors, enriching their experience and understanding of the art.
 - title: Academic Interests
   type: nested_list
   contents:
