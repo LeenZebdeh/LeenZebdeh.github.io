@@ -16,7 +16,7 @@ social: true # includes social icons at the bottom of the page
 
 I'm a computer science graduate student at the University of Alberta, specializing in machine learning (ML). Here are a few examples:
 
-✅ Developing a predictive Transformer model for blood glucose in type 2 diabetes patients using TensorFlow and PyTorch; co-authoring a forthcoming research paper.
+✅ Developing a predictive Transformer model for blood glucose in type 2 diabetes patients using TensorFlow and PyTorch; co-authoring a forthcoming research paper. <br>
 ✅ Collaborated in a 7-member team to develop and deploy a business website for Zero RampUp using JavaScript. <br>
 ✅ Worked as a Django backend developer to create a social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers. <br>
 ✅ Trained, tuned, and deployed various machine learning models with PyTorch and TensorFlow. <br>

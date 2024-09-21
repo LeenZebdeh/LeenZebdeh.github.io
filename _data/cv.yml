@@ -11,38 +11,38 @@
   contents:
     - title: Master of Science, Computing Science
       institution: University of Alberta, Edmonton, Alberta
-      year: September 2024 - June 2026
+      year: Sep 2024-Jun 2026
     - title: Bachelor of Science, Specialization in Computing Science
       institution: University of Alberta, Edmonton, Alberta
-      year: 2020 - June 2024
+      year: 2020-Jun 2024
       description:
         - First Class Standing (GPA≥3.5)
 - title: Skills
   type: nested_list
   contents:
-    - title: Languages<u>:<\u> Python, C, Java, Julia, JavaScript/ TypeScript, SQL, HTML/CSS, XML.
-    - title: <u>Technologies:<\u> NumPy, PyTorch, Keras, TensorFlow, Pandas, scikit-learn, Matplotlib, React (ES6), Django, Android, Git, JUnit, Docker NLTK, Linux, Shell.
-    - title: Databases<u>:<\u> MongoDB, PostgreSQL.
+    - title: "Languages: Python, C, Java, Julia, JavaScript/ TypeScript, SQL, HTML/CSS, XML."
+    - title: "Technologies: NumPy, PyTorch, Keras, TensorFlow, Pandas, scikit-learn, Matplotlib, React (ES6), Django, Android, Git, JUnit, Docker NLTK, Linux, Shell."
+    - title: "Databases: MongoDB, PostgreSQL."
 - title: Experience
   type: time_table
   contents:
     - title: Student Researcher
-      institution: University of Alberta<u>:<\u>Department of Medicine, Edmonton, Alberta
-      year: January 2024 - Present
+      institution: "University of Alberta: Department of Medicine, Edmonton, Alberta"
+      year: Jan 2024-Present
       description:
         - Developing a PyTorch Temporal Fusion Transformer model to predict blood glucose levels for hospitalized type 2 diabetes patients, utilizing time series data from electronic medical record.
         - Performing feature engineering to enhance model performance, including the extraction and creation of new features from raw time series data.
         - Staying updated with the latest research and developments in time series forecasting and machine learning in healthcare, applying new techniques to improve the model's performance.
     - title: Street Team Member
       institution: Reverb Communications, Edmonton, Alberta
-      year: July 2022 - Present
+      year: Jul 2022- Present
       description:
         - Establish booths to educate the public on train-related safety ahead of the valley train line opening.
         - Present and disseminate educational materials, proactively addressing inquiries to enhance public knowledge and adherence to train safety protocols.
         - Engaged large audiences, reaching 80+ persons per hour regularly.
     - title: Frontend Developer
       institution: Zero RampUp, Remote
-      year: September 2022 - December 2022
+      year: Sep 2022-Dec 2022
       description:
         - Collaborated in a 7-member team to develop and deploy a business website from scratch, using JavaScript.
         - Utilized Agile methodology with weekly stand-ups and sprint planning.
@@ -50,13 +50,13 @@
         - Engaged in pair programming with frontend developers and conducted code reviews to ensure code quality.
     - title: Tutor
       institution: Paper Edu, Remote
-      year: 2020 - 2024
+      year: 2020-2024
       description:
         - Tutored K-12 students in computer science and mathematics, earned an average of 94% positive reviews.
         - Provided code review for computer science students in Java, Python, C and JavaScript.
     - title: Intern
       institution: University of Alberta, Edmonton, Alberta
-      year: July 2018 - August 2018
+      year: Jul 2018-Aug 2018
       description:
         - Collaborated on a 6-week research project to optimize the performance of a program that simulates the board game Hex, mainly through refactoring and rewriting existing code.
         - Presented the findings to an audience of over 30 peers, faculty, and industry professionals. This presentation demonstrated improved program performance metrics and facilitated an interactive Q&A session.
@@ -65,48 +65,49 @@
   contents:
     - title: ROS Developer
       institution: Autonomous Robot Driving Using Robot Operating System (ROS)
-      year: February 2023 - April 2023
+      year: Feb 2023-Apr 2023
       description:
         - DContributed to a team of 5 to develop a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers.
         - Built the app's backend, integrated APIs, and wrote unit tests in Django.
         - Tools, Python, NLTK, Pandas.
     - title: NLP Developer
       institution: NLP-Based Relation Extraction & Classification
-      year: November 2021 - December 2021
+      year: Nov 2021-Dec 2021
       description:
         - Developing and optimizing a Naive Bayes classifier for NLP, focused on extracting and categorizing semantic relationships from text, utilizing advanced data preprocessing and evaluation techniques including 3-fold cross-validation on the FewRel dataset.
         - Tools, Python, PyTorch, NumPy.
     - title: Computer Vision Developer
       institution: Semantic Image Segmentation on MNISTDD-RGB
-      year: November 2021 - December 2021
+      year: Nov 2021-Dec 2021
       description:
         - Customized a U-Net model for image segmentation on the MNIST Double Digits RGB dataset and achieved 86% accuracy.
         - Tools, Python, PyTorch, NumPy.
     - title: Machine Learning Developer
       institution: Linear Regression, Neural Networks and SVM to Predict Edmonton’s Weather
-      year: March 2023 - April 2023
+      year: Mar 2023-Apr 2023
       description:
         - Implemented linear regression, neural networks, support vector machine (SVM) algorithms to predict temperature and precipitation using Edmonton's daily weather dataset.
         - Tools, Python, Matplotlib, NumPy, TensorFlow, scikit-learn, sodapy.
     - title: Django Backend Developer
       institution: Distributed Social Networking Web App
-      year: January 2023 – April 2023
+      year: Jan 2023–Apr 2023
       description:
         - Contributed to a team of 5 to develop a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers.
         - Built the app's backend, integrated APIs, and wrote unit tests in Django.
         - Tools, Python, Django, React.
     - title: Android Developer
       institution: Habit Tracking App
-      year: September 2021 - December 2021
+      year: Sep 2021-Dec 2021
       description:
         - Collaborated in a team to create a social media Android app using Java, XML and Cloud Firestore.
         - Implemented a map to share a post’s location, with address search and selection using Geolocation API.
         - Employed JUnit for unit testing to enhance code quality and prevent bugs.
 - title: Presentations
-- type: nested_list
+  type: time_table
   contents:
-    - title: Invited Presentations
-      items: Alzebdeh L, Lin C. Glucose Prediction and Automated Insulin Dosing in Hospitals. Endocrinology division, University of Alberta; Edmonton AB. April 2024.
+    - title: Alzebdeh L, Lin C. Glucose Prediction and Automated Insulin Dosing in Hospitals. Endocrinology division, University of Alberta; Edmonton AB. April 2024.
+      year: Apr 2024
+      description: 
 - title: Relevant Courses
   type: nested_list
   contents:
@@ -149,4 +150,4 @@
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Cooking new cuisines (currently Korean), reading (Life 3.0 by Max Tegmark at the moment), sketching.
+    - "Hobbies: Cooking new cuisines (currently Korean), reading (Life 3.0 by Max Tegmark at the moment), sketching."
