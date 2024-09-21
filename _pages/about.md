@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Aspiring Software Developer <br> Edmonton, AB, Canada
+subtitle: ML graduate student @ University of Alberta <br> Edmonton, AB, Canada
 
 profile:
   align: right
