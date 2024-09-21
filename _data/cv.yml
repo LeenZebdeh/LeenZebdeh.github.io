@@ -3,27 +3,46 @@
   contents:
     - name: Full Name
       value: Leen Alzebdeh
-    - name: Date of Birth
-      value: 22 March 2002
     - name: Languages
       value: English, Arabic
 
 - title: Education
   type: time_table
   contents:
+    - title: Master of Science, Computing Science
+      institution: University of Alberta, Edmonton, Alberta
+      year: September 2024 - June 2026
     - title: Bachelor of Science, Specialization in Computing Science
       institution: University of Alberta, Edmonton, Alberta
-      year: 2020-2024
-    - title: Bachelor of Science, Specialization in Physics
-      institution: University of Alberta, Edmonton, Alberta
-      year: 2019-2020
-
+      year: 2020 - June 2024
+      description:
+        - First Class Standing (GPA≥3.5)
+- title: Skills
+  type: nested_list
+  contents:
+    - title: Languages<u>:<\u> Python, C, Java, Julia, JavaScript/ TypeScript, SQL, HTML/CSS, XML.
+    - title: <u>Technologies:<\u> NumPy, PyTorch, Keras, TensorFlow, Pandas, scikit-learn, Matplotlib, React (ES6), Django, Android, Git, JUnit, Docker NLTK, Linux, Shell.
+    - title: Databases<u>:<\u> MongoDB, PostgreSQL.
 - title: Experience
   type: time_table
   contents:
+    - title: Student Researcher
+      institution: University of Alberta<u>:<\u>Department of Medicine, Edmonton, Alberta
+      year: January 2024 - Present
+      description:
+        - Developing a PyTorch Temporal Fusion Transformer model to predict blood glucose levels for hospitalized type 2 diabetes patients, utilizing time series data from electronic medical record.
+        - Performing feature engineering to enhance model performance, including the extraction and creation of new features from raw time series data.
+        - Staying updated with the latest research and developments in time series forecasting and machine learning in healthcare, applying new techniques to improve the model's performance.
+    - title: Street Team Member
+      institution: Reverb Communications, Edmonton, Alberta
+      year: July 2022 - Present
+      description:
+        - Establish booths to educate the public on train-related safety ahead of the valley train line opening.
+        - Present and disseminate educational materials, proactively addressing inquiries to enhance public knowledge and adherence to train safety protocols.
+        - Engaged large audiences, reaching 80+ persons per hour regularly.
     - title: Frontend Developer
       institution: Zero RampUp, Remote
-      year: Sep 2022 - Dec 2022
+      year: September 2022 - December 2022
       description:
         - Collaborated in a 7-member team to develop and deploy a business website from scratch, using JavaScript.
         - Utilized Agile methodology with weekly stand-ups and sprint planning.
@@ -31,72 +50,69 @@
         - Engaged in pair programming with frontend developers and conducted code reviews to ensure code quality.
     - title: Tutor
       institution: Paper Edu, Remote
-      year: 2020 - Present
+      year: 2020 - 2024
       description:
-        - Tutor K-12 students in computer science and mathematics, earning an average of 94% positive reviews.
-        - Provide code review for computer science students in Java, Python, C and JavaScript.
-    - title: Street Team Member
-      institution: Reverb Communications, Edmonton, Alberta
-      year: Jul 2022 - Present
-      description:
-        - Establish booths to educate the public on train-related safety ahead of the valley train line opening.
-        - Present and disseminate educational materials, proactively addressing inquiries to enhance public knowledge and adherence to train safety protocols.
-        - Engaged large audiences, reaching 80+ persons per hour regularly.
+        - Tutored K-12 students in computer science and mathematics, earned an average of 94% positive reviews.
+        - Provided code review for computer science students in Java, Python, C and JavaScript.
     - title: Intern
       institution: University of Alberta, Edmonton, Alberta
-      year: Jul 2018 - Aug 2018
+      year: July 2018 - August 2018
       description:
         - Collaborated on a 6-week research project to optimize the performance of a program that simulates the board game Hex, mainly through refactoring and rewriting existing code.
-        - Presented findings to an audience of over 30 peers, faculty, and industry professionals. This presentation highlighted key optimization strategies, demonstrated improved program performance metrics, and facilitated an interactive Q&A session to engage the audience and clarify complex technical concepts.
-        - Completed duties ahead of schedule and took initiative to advise another team.
+        - Presented the findings to an audience of over 30 peers, faculty, and industry professionals. This presentation demonstrated improved program performance metrics and facilitated an interactive Q&A session.
 - title: Projects
   type: time_table
   contents:
-    - title: ROS Developer 
+    - title: ROS Developer
       institution: Autonomous Robot Driving Using Robot Operating System (ROS)
-      year: Feb 2023 - Apr 2023
+      year: February 2023 - April 2023
       description:
         - DContributed to a team of 5 to develop a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers.
         - Built the app's backend, integrated APIs, and wrote unit tests in Django.
         - Tools, Python, NLTK, Pandas.
     - title: NLP Developer
       institution: NLP-Based Relation Extraction & Classification
-      year: Nov 2021 - Dec 2021
+      year: November 2021 - December 2021
       description:
         - Developing and optimizing a Naive Bayes classifier for NLP, focused on extracting and categorizing semantic relationships from text, utilizing advanced data preprocessing and evaluation techniques including 3-fold cross-validation on the FewRel dataset.
         - Tools, Python, PyTorch, NumPy.
     - title: Computer Vision Developer
       institution: Semantic Image Segmentation on MNISTDD-RGB
-      year: Nov 2021 - Dec 2021
+      year: November 2021 - December 2021
       description:
         - Customized a U-Net model for image segmentation on the MNIST Double Digits RGB dataset and achieved 86% accuracy.
         - Tools, Python, PyTorch, NumPy.
-    - title: Machine Learning Developer 
-      institution:  Linear Regression, Neural Networks and SVM to Predict Edmonton’s Weather
-      year: Mar 2023 – Apr 2023
-      description: 
+    - title: Machine Learning Developer
+      institution: Linear Regression, Neural Networks and SVM to Predict Edmonton’s Weather
+      year: March 2023 - April 2023
+      description:
         - Implemented linear regression, neural networks, support vector machine (SVM) algorithms to predict temperature and precipitation using Edmonton's daily weather dataset.
         - Tools, Python, Matplotlib, NumPy, TensorFlow, scikit-learn, sodapy.
     - title: Django Backend Developer
       institution: Distributed Social Networking Web App
-      year: Jan 2023 – Apr 2023
+      year: January 2023 – April 2023
       description:
         - Contributed to a team of 5 to develop a blogging/social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers.
         - Built the app's backend, integrated APIs, and wrote unit tests in Django.
         - Tools, Python, Django, React.
     - title: Android Developer
-      institution:  Habit Tracking App
-      year: Sep 2021 - Dec 2021
+      institution: Habit Tracking App
+      year: September 2021 - December 2021
       description:
         - Collaborated in a team to create a social media Android app using Java, XML and Cloud Firestore.
         - Implemented a map to share a post’s location, with address search and selection using Geolocation API.
         - Employed JUnit for unit testing to enhance code quality and prevent bugs.
+- title: Presentations
+- type: nested_list
+  contents:
+    - title: Invited Presentations
+      items: Alzebdeh L, Lin C. Glucose Prediction and Automated Insulin Dosing in Hospitals. Endocrinology division, University of Alberta; Edmonton AB. April 2024.
 - title: Relevant Courses
   type: nested_list
   contents:
     - title: CMPUT 401 - Software Process and Product Management
       items:
-        - Demonstrated best practices in software project and product development.   
+        - Demonstrated best practices in software project and product development.
     - title: CMPUT 461 - Introduction to Natural Language Processing (NLP)
     - title: CMPUT 328 - Visual Recognition
       items:
@@ -126,9 +142,9 @@
   type: nested_list
   contents:
     - title: Machine learning
-    - title: Best software development practices
-    - title: Deep-learning-based machine vision
-    - title: Mobile robotics
+    - title: AI in healthcare
+    - title: Machine vision
+    - title: Time-series predictions
 
 - title: Other Interests
   type: list
