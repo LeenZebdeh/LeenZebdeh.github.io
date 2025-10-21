@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: ML graduate student @ University of Alberta <br> Edmonton, AB, Canada
+subtitle: Master's Student @ University of Alberta <br> Edmonton, AB, Canada
 
 profile:
   align: right
-  image: prof_pic.jpg
+  #image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
 
 news: false # includes a list of news items
@@ -14,18 +14,25 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm a computer science graduate student at the University of Alberta, specializing in machine learning (ML). Here are a few examples:
 
-✅ Developing a predictive Transformer model for blood glucose in type 2 diabetes patients using TensorFlow and PyTorch; co-authoring a forthcoming research paper. <br>
-✅ Collaborated in a 7-member team to develop and deploy a business website for Zero RampUp using JavaScript. <br>
-✅ Worked as a Django backend developer to create a social network platform web app that is linked with other teams’ unique APIs and can aggregate activity from their web servers. <br>
-✅ Trained, tuned, and deployed various machine learning models with PyTorch and TensorFlow. <br>
-✅ Customized ML models, such as YOLOv5 and U-Net, to perform object detection and image segmentation. <br>
-✅ Experienced in AI and reinforcement learning algorithms, including A\* search, Q-learning, and heuristic search. <br>
-✅ Developed and tested an Android social media app as a developer in a collaborative Scrum environment.
+Hi there, I'm Leen 👋
 
-𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗦𝗸𝗶𝗹𝗹𝘀 & 𝗧𝗼𝗼𝗹𝘀: React, Python, Java, Android, PostgreSQL, MongoDB, Docker & AI technologies!
+I’m a Master’s student in Translational Medicine with a Bachelor's in Computing Science, specializing in machine learning for healthcare. My research is using AI to forecast blood glucose trajectories using large-scale electronic health records, with the goal of optimizing healthcare operations and improving patient outcomes.
 
-I get excited about opportunities where I'm able to work with highly creative people to develop innovative solutions using the latest technology.
+𝗦𝗲𝗹𝗲𝗰𝘁𝗲𝗱 𝗪𝗼𝗿𝗸𝘀:
 
-My Interests: Cooking new cuisines (currently most interested in Korean cuisine), Reading (currently reading Life 3.0 by Max Tegmark and my favourite is Crime and Punishment by Dostoevsky).
+✅ Presented first-author at European Association for the Study of Diabetes (EASD) 2025 in Vienna, one of the world's largest medical conferences.
+
+✅ Front-end dev: Built an e-commerce website in React for Zero RampUp.
+
+✅ Back-end dev: Django APIs for a distributed social platform.
+
+✅ Computer vision: YOLOv5 / U-Net for detection & segmentation in addition to Detectron2 for autonomous vehicle navigation; deployment with Docker.
+
+𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗦𝗸𝗶𝗹𝗹𝘀 & 𝗧𝗼𝗼𝗹𝘀:
+
+Python, PyTorch, TensorFlow, scikit-learn, Pandas, NumPy, SQL, React, Django, Docker, Git; MongoDB, PostgreSQL.
+
+I’m excited about roles where data science meets practical deployment—collaborating with experts like clinicians and engineers to turn models into measurable impact.
+
+Contact: LeenAlzebdeh1@gmail.com
