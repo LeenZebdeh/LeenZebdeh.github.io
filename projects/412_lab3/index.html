@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Computer Vision for Robotics 🦆🦆🦆 | Leen  Alzebdeh</title>
+    <meta name="author" content="Leen  Alzebdeh">
+    <meta name="description" content="I improve localization of the robot in the environment using static landmarks.">
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://leenzebdeh.github.io/projects/412_lab3/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header --><header>
+
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Leen </span>Alzebdeh</a>
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">about</a>
+          </li>
+          <!-- Other pages -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/publications/">publications</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/projects/">projects</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/cv/">cv</a>
+          </li>
+
+          <!-- Toogle theme mode -->
+          <li class="toggle-container">
+            <button id="light-toggle" title="Change theme">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Scrolling Progress Bar -->
+  <progress id="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</header>
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <!-- page.html -->
+        <div class="post">
+
+          <header class="post-header">
+            <h1 class="post-title">Computer Vision for Robotics 🦆🦆🦆</h1>
+            <p class="post-description">I improve localization of the robot in the environment using static landmarks.</p>
+          </header>
+
+          <article>
+            <p><a href="https://github.com/Leen-Alzebdeh/duckietown/tree/main/lab3" rel="external nofollow noopener" target="_blank">Link to the GitHub repo</a></p>
+
+<p><b> Contributors </b> <br>
+Leen Alzebdeh and Tianming Han</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>In this exercise, we managed to write a ROS container that is able to continuously relocalize the robot while utilizing the dead reckoning node to provide an up-to-date measurement of the robot position.</p>
+
+<h2 id="objective">Objective</h2>
+
+<p> Our objective is to visualize robot transforms by using a fixed world frame and considering all other frames, including the robot frame, relative to it. We aim to improve localization of the robot in the environment by using static landmarks, AprilTags, in the environment. We also aim to incorporate computer vision for the robot to drive inside road lanes, and to detect the ID of each AprilTag it observes in the environment. </p>
+
+<h2 id="background">Background</h2>
+
+<p> In the last exercise, our robot was able to locate itself according to its initial position and drive autonomously according to preset motions. We had also used the led_emitter topic to convey the state of the robot through light patterns. Driving relative to the initial position creates limitations to the robot’s knowledge of where it is and how far it has travelled and this motivates the use of global coordinates for the frame. </p>
+
+<h2 id="methods-and-results">Methods and Results</h2>
+
+<p><b> Task 1- Computer Vision:</b> <a href="https://github.com/CMPUT412-Exercise2-Leen-Tianming/AdvancedARExercise" rel="external nofollow noopener" target="_blank">https://github.com/CMPUT412-Exercise2-Leen-Tianming/AdvancedARExercise</a></p>
+
+<p>We start by writing a node that subscribes to the hostname/camera_node/image/compressed topic. To reduce the effect of lens distortion, we undisort the image we receive by first importing intrinsic and extrinsic camera values, from which we extract the camera matrix, used to convert from 3D camera to 2D image coordinates, and the distortion coefficients, which describes distortions in the image. Using OpenCV’s cv2.getOptimalNewCameraMatrix, we obtain a new camera matrix which we use to obtain a new undistorted image, using cv2.undistort, which we publish to the topic hostname/compressed. <br>
+
+We additionally use the Detector class from the library dt_AprilTags to detect tags that appear in the image, and extract their translation and corners, which we use to mark the center and edges of the tags in the published image, along with the name corresponding to each tag’s ID.
+
+In addition to marking the tags in the published image, we reflect this detection through different color in the LEDs, which we do using the LEDClient class that utilizes the hostname/led_emitter_node/set_pattern service.</p>
+
+<div class="row justify-content-md-center">
+    <video width="320" height="240" controls="">
+    <source src="../../assets/vid/412_lab3/part1.mp4" type="video/mp4"></source>
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="caption">
+    Video 1. Labelling the AprilTags:
+    A video of the duckiebot going around and estimating positions of the AprilTags (two markers are drawn in the center of each tag, one for the average position of four corners, the other is the 3d center of the tag)
+</div>
+
+<p><b> Task 2 - Lane Following:</b> <a href="https://github.com/KarlHanEdn/E3P3Transform/tree/master/packages/lane_following" rel="external nofollow noopener" target="_blank">https://github.com/KarlHanEdn/E3P3Transform/tree/master/packages/lane_following</a></p>
+
+<p> To start, we first create a node which can stay inside a lane, we first subscribe to the image topic. On the incoming stream, using OpenCV, we apply color masking to capture the yellow lane markings, apply enough dilation so the yellow marking blobs form a bigger blob, and find the contour with the largest area. <br>
+
+In order to determine the direction the Duckiebot is travelling, we calculates the center of the contour by taking the bounding box of the contour and computing its center. The center of the contour is expected to lie on a line that is static if the robot is driving right in the middle. To adjust position, we measure the difference between the reference line and actual line through the contour as follows:
+
+</p>
+<blockquote>
+position_ref = -position_line_ref[2].item() - contour_y * position_line_ref[1].item()
+
+position_error = position_ref - contour_x
+
+</blockquote>
+
+Where position_ref is the expected x location on the line we want the yellow lane marks to lie on, while the equation on the right calculates it by using a line equation that we manually selected from a reference image when the robot is right in the middle of the left lane. <br>
+
+And similarly, to determine if our angle needs to be adjusted, we calculate the error using:
+
+<blockquote>
+angle_error = (ref_angle - angle + math.pi) % (2 * math.pi) - math.
+</blockquote>
+
+Where ref_angle is the angle of the reference line. <br>
+
+To better regulate the robot’s motion, we implemented a PID controller, where we start by publishing the velocity of the left and right wheels to the hostname/wheels_driver_node/wheels_cmd topic for debugging. We then calculates the error integral and derivative by summing up/subtracting between consecutive observed errors. With the error as well as its integral/derivative, we multiple the three terms by three tunable coefficients and sum them up to get the direction and magnitude of the turn. To make the turn, we just add/subtract a number from the speeds of left and right wheels. The results of our duckiebot drives in the English style are shown below.
+
+<div class="row justify-content-md-center">
+    <video width="320" height="240" controls="">
+    <source src="../../assets/vid/412_lab3/part2.mp4" type="video/mp4"></source>
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="caption">
+    Video 3.2. English Driver"
+    A video of duckiebot driving in English driver style around the duckietown with a full circle. The position difference between the red arrow and the other two arrows makes up the error term in the PID controller.
+</div>
+
+<p><b>Task 3 - Localization using Sensor Fusion </b></p>
+
+<p> To localize the robot in 3d, we need a way to calculate the transformations from observed landmarks to our robot positions and convert that in the world frame. These can be managed in ROS via the tf/tf2 library. They can publish known positions and provide lookup to transformations between existing frames. Due to the difficulty of judging if the position estimate is accurate in 3d, we also need RViz, which is a tool to provide 3d visualization for the robot. <br>
+
+First we modeled the landmarks by using the measured positions provided by our TA, along with their orientations (which way it faces). We broadcasted their 3d poses when the AprilTag detector node boots up, with the orientation transformed to match the one used by dt-AprilTag library (which has the AprilTag facing z- direction in its own frame) and their height is set to 0.1 meters from the ground. We use a dictionary with AprilTag ids as keys and we are able to lookup corresponding locations by querying the frame with the name "tag&lt;id&gt;".<br>
+
+For the first step in localization (3.1 and 3.2) we simply initialize our robot odometry at a fixed location on the duckietown, facing x+ axis with the orientation represented as the unit quaternion (0, 0, 0, 1). The initialization is done by broadcasting a TransformStamped message to a separate topic. Our dead reckoning node listens to that topic and records the transformations and calculates position offsets from wheel encoder data on top of that. </p>
+
+<div class="row justify-content-md-center">
+    <video width="320" height="240" controls="">
+    <source src="../../assets/vid/412_lab3/part3.1.mp4" type="video/mp4"></source>
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="caption">
+    Video 3.2. Deadreckoning in RViz:
+We first tested our robot localization without AprilTag detections, the results are visualized in RViz. After a circle of driving the robot path starts to drift and the estimation ends up at a place  that is relatively far from where it actually is.
+</div>
+
+<p>RViz, rqt_image_view and other useful small programs like rostopic or rosnode can be launched inside start_gui_tools. We launched gui tools and rviz. After recording a video of the visualized result of the duckiebot driving a circle around the duckietown, we were sure the transform was working and moved on to the next part. <br>
+
+For 3.3 the transform graph is generated by tf2_tools. In order to get access to the tools we log onto the ROS container on the robot through the console option of the portainer. Afterwards we use “rosrun tf2_tools view_frames.py” to run the tools and view the result after using scp to transmit it back to our laptop. In the graph we see all component frames of the robot listed as nodes, with the $veh/footprint node at the top as root frame for all nodes.</p>
+
+<div class="row">
+  <div class="column">
+    <a href="../../assets/pdf/412_lab3/3.3.pdf"><img src="../../assets/img/412_lab3/3.3.jpg" style="width:100%"></a>
+    <div class="caption">
+    <b>Transform Graph 3.3</b>
+    tf2_tools visualized graph before adding odometry frame
+    </div>
+  </div>
+  <div class="column">
+    <a href="../../assets/pdf/412_lab3/3.5.pdf"><img src="../../assets/img/412_lab3/3.5.jpg" style="width:100%"></a>
+    <div class="caption">
+        <b>Transform Graph 3.5</b>
+        tf2_tools visualized graph after adding odometry frame
+    </div>
+  </div>
+</div>
+
+<p>We also used RViz to visualize the robot frames. After adding the tf visualization and the robot model into the scene, we were able to see the robot’s camera, top plate, base and wheel axis positions are all modeled by the component frames. When rotating the robot wheels, we notice one frame at the left/right wheel location rotates, which is the $veh/left_wheel frame. <br>
+
+For 3.5, we need to connect the robot frames to our odometry estimation. We broadcasted the footprint frame as the parent and odometry estimation as child to a StaticTransformationBroadcaster via tf package. Then after remaking the transform graph we see odometry as a child of the footprint frame. The root frame is still the footprint frame (ignoring the world frame at the top) because we have not broadcasted any frame as parent of the footprint frame.<br>
+
+For 3.6, we need to detect AprilTags and use our robot’s dead reckoning estimate to estimate the position of the AprilTag it sees. With the static AprilTag visualizations setup in 3.2, we can compare between the estimation and the ground truths. The AprilTag detections return both a translation pose_t and a rotation matrix pose_R, which transforms from the dt-AprilTag’s camera frame and the AprilTag frame. With this transformation we can estimate the tags’ position by attaching a child frame on the camera AprilTag’s frame with the pose_t and pose_R transformation and publish it using tf. Then the automatic transform calculation allow use to see the tags’ estimated positions in RViz. Driving around the duckietown, we see that the tags’ orientations are estimated relatively accurately by the robot, but their positions become very inaccurate as the robot’s dead reckoning gradually becomes unreliable.</p>
+
+<div class="row justify-content-md-center">
+    <video width="320" height="240" controls="">
+    <source src="../../assets/vid/412_lab3/part3.2.mp4" type="video/mp4"></source>
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="caption">
+Estimating AprilTag positions:
+Our robot driving around the duckietown and publishing estimated AprilTag locations to the tf broadcaster. The results are visualized using RViz and we can see their estimated positions compared to the actual positions.
+</div>
+
+<p>In 3.7 we localize our robot using camera AprilTag observations. Similar to 3.6, but this time we correct for the world-&gt;base_link transformation instead of the camera-&gt;tag transformation every time we see an AprilTag, and we utilize the localization initialization topic we created in 3.2. Now we know three transformations: world-&gt;tag given by the map of landmarks, /footprint-&gt;camera given by the tf graph and camera-&gt;tag given by the AprilTag detection topic. We can chain them together to obtain the world-&gt;/footprint transformation which is what we look for.
+
+Now each time the AprilTag is seen in the camera, we update our robot’s footprint frame position and display it in the RViz, as shown in the video below.
+
+</p>
+
+<div class="row justify-content-md-center">
+    <video width="320" height="240" controls="">
+    <source src="../../assets/vid/412_lab3/part3.3.mp4" type="video/mp4"></source>
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="caption">
+Duckiebot Localization:
+Finally, we used AprilTag estimates to update our duckiebot position in relation to the world frame. The result is that the duckiebot is able to better estimate its absolute position, though we introduce teleportation between different positions when the tags are seen.
+</div>
+
+<h2 id="qas">QAs</h2>
+
+<p><br><b>1.2 AprilTag Node</b><br>
+<br><b>What does the AprilTag library return to you for determining its position?</b><br>
+A list of detections is returned for an input camera image, each detection has a pose_t attribute that contains the (x, y, z) offset of AprilTag in relation to the duckiebot’s camera position.
+<br><b>Which directions do the X, Y, Z values of your detection increase/decrease</b><br>
+X increases as the tag moves right (in the camera image), Y increases as the tag moves down, and Z increases as the tag moves away from the camera.
+<br><b>What frame orientation does the April tag use?</b><br>
+The AprilTag frame used by the dt-AprilTag library has the back of the tag facing z+ axis. When the camera is direction opposed to the AprilTag, the right side of the image is in the x+ axis and the down side of the image is in the y+ axis. The center of the three axes (origin) is the center of the AprilTag pattern.
+<br><b>Why are detections from far away prone to error?</b><br>
+Far-away detections are blurry in the image and their detected position contain more uncertainty. Numerically the length on an object in the image is inverse to its distance from the image, so by estimating the position from the shape and size of the AprilTag in terms of # of pixels N in the image, the uncertainty on the distance d is proportional to</p>
+
+<blockquote>1/(N - 1) - 1/N ≈ 1/N2 ∝ d2</blockquote>
+<p>So we get an uncertainty on the depth that is about quadratic to the real depth of the object.
+<br><b>Why may you want to limit the rate of detections?</b><br>
+It could lead to significant burden on the CPU as image detection is costly to run in real-time.
+<br><br><b>2 Lane Following</b><br>
+<br><b>With a basic proportional controller, how well does it work? What happens when your control loop has a very large error?</b><br> <br>
+A basic proportional controller does seem to keep the vehicle in lane, but in most cases it oscillates in its moving direction and goes off the lane eventually. When the control loop has a very large error, the vehicle will overshoot when trying to correct it, leading to an error of about equal magnitude (sometimes more) on the other side.
+<br><b>Try adding a derivative term, does that help? Why or why not? Does it help when the error is large?</b><br>
+The derivative term does not seem to help when we tested it.
+When visualizing the error in a graph, we see that the derivative of the error is noisy and occasionally spikes up or down, which could be partly caused by the way we calculate the error, which involves selecting the largest group of yellow lane markers in the image, and when we jumps from one group to the next we get a large derivative term.
+The derivative term does not help when the error is large.
+<br><b>Try adding an integral term, does that help? Is the I term useful? Why or why not?</b><br>
+An integral term does seem to help. In the case that the robot tends to move to one direction, the I term will grow in that direction and correct for the tendency until the robot stays in the middle of the lane. In a few runs that we did for both P and PI controllers, the oscillation also seemed to be less severe for PI controllers (and we got it running for multiple loops without failure), but the cause is unknown and we could not replicate it in a simple PID simulation in 1d motion control.
+<br><b>What is the error for your PID controller?</b><br>
+The error is the horizontal position difference in pixels between the center of the group of yellow lane markers and the expected lane position at the same height assuming the robot is in the middle of the lane. By minimizing this error we can make sure we stay in the middle of our lane.
+<br><b>What is the reason the proportional controller works badly (if it did)?</b><br>
+The P controller always overshoots when correcting large error, because it does not attempt to stop the momentum when the error approaches zero.
+<br><br><b>3.2 Creating Static Landmark Frames</b><br>
+<br><b>Where does the odometry drift the most? Why?</b><br>
+The odometry estimation drifts the most at the end of the task after the robot has made many turns. In each turn we have less and less accurate estimates of its orientation because the wheel encoders are not as good at estimating orientation as it is at estimating distances traveled. Then as the robot moves forward with inaccurate orientation, its position becomes inaccurate as well.
+<br><b>Did adding landmarks make it easier to understand where the drifting occurred?</b><br>
+Yes, the landmarks help providing reference for the robot position, and we can see that the position becomes further away from its actual position as time passes.
+<br><br><b>3.4 Visualizing the Robot Transformations</b><br>
+<br><b>What joint appears to be moving in the rviz when the robot wheels are rotating? What type of joint is this?</b><br>
+The joint “$veh_left_wheel_axis_to_left_wheel” appears to be rotating around the wheel axis as the robot moves. Looking at the URDF file, the type of the joint is continuous (as opposed to, for example, fixed joint type).
+<br><br><b>3.5 Connecting our Odometry Frame To Our Robot Frame</b><br>
+<br><b>Why does the odometry frame move but the robot frame doesn’t?</b><br>
+rviz relies on finding a path in the tf tree from the fixed frame (which is the world frame) as the root frame of the environment to the robot frame in order to determine the transformation between the fixed frame and the robot. The robot root frame $veh/footprint is initially not linked to the odometry frame, and even after it is linked to the fixed frame its position will still not be affected by the movement of odometry because the path from the fixed frame to the robot frame does not contain the odometry frame.
+<br><br><b>3.6 Visualizing AprilTag Detections in RViz</b><br>
+<br><b>How far off are Detections from April Tags’ True Positions?</b><br>
+April tags’ estimated positions are a few tens of centimeters away from their labeled positions in rviz, and increases as the robot continues to move.
+<br><b>What are two possible causes for this error?</b><br>
+One cause is from the errors in the dead-reckoning i.e. the delay and measurement errors from wheel encoder data. Another error comes from the AprilTag localization.
+<br><br><b>3.7 Calculating Transform from AprilTag to Robot Base &amp; Applying to Static Frame</b><br>
+<br><b>Is the resulting localization system perfect?</b><br>
+The resulting localization system is not perfect, because there are still errors from both dead reckoning algorithm and AprilTag detection algorithm. We also introduced occasional teleportation of the robot as one thing we need to take into account.
+<br><b>What are the causes of errors in this localization method?</b><br>
+For this method, both the errors from the dead-reckoning algorithm and ones from the AprilTag detection algorithm will end up affecting the results of localization.
+Both wheel encoder and the camera suffers more or less from topic communication delays and observation errors due to imperfect sensors. For wheel encoders, slippery road may cause issues, and the errors from the wheel encoder is typically amplified when the robot is turning. For the AprilTag localization, we may get camera calibration errors or errors in the dt-AprilTags library’s detection algorithm.
+<br><b>What approaches could be used to improve localization?</b><br>
+One approach to improve localization may be to use methods that will increase the time period when the robot can use AprilTags localization and minimize the
+use of dead-reckoning. We can try using existing SLAM algorithms. If the robot is outdoors then we can use GPS to locate it.</p>
+
+<h2 id="references">References</h2>
+
+<p>dt-AprilTags repository README.md: <a href="https://github.com/duckietown/lib-dt-AprilTags" rel="external nofollow noopener" target="_blank">https://github.com/duckietown/lib-dt-AprilTags</a><br>
+color masking: [https://www.tutorialspoint.com/detection-of-a-specific-color-blue-here-using-opencv-with-python](https://www.tutorialspoint.com/detection-of-a-specific-color-blue-here-using-opencv-with-python<br>
+opencv find contours: <a href="https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html" rel="external nofollow noopener" target="_blank">https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html</a><br>
+calculating features of a given contour: <a href="https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html" rel="external nofollow noopener" target="_blank">https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html</a><br>
+tf.transformations documentation and examples: <a href="http://docs.ros.org/en/jade/api/tf/html/python/transformations.html" rel="external nofollow noopener" target="_blank">http://docs.ros.org/en/jade/api/tf/html/python/transformations.html</a><br>
+tf transformation overview: <a href="http://wiki.ros.org/tf/Overview/Transformations&lt;br&gt;" rel="external nofollow noopener" target="_blank">http://wiki.ros.org/tf/Overview/Transformations</a><br>
+tf navigation tutorial: <a href="http://wiki.ros.org/navigation/Tutorials/RobotSetup/Tf" rel="external nofollow noopener" target="_blank">http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF</a><br>
+publishing camera info: <a href="https://gist.github.com/rossbar/ebb282c3b73c41c1404123de6cea4771" rel="external nofollow noopener" target="_blank">https://gist.github.com/rossbar/ebb282c3b73c41c1404123de6cea4771</a><br>
+tf2 wait for transform: <a href="http://wiki.ros.org/tf2/Tutorials/tf2%20and%20time%20%28Python%29" rel="external nofollow noopener" target="_blank">http://wiki.ros.org/tf2/Tutorials/tf2%20and%20time%20%28Python%29</a><br></p>
+
+          </article>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2025 Leen  Alzebdeh. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script defer src="/assets/js/common.js"></script>
+
+    
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>

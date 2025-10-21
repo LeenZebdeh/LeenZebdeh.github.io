@@ -3,17 +3,16 @@
 
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=/">    <!-- Metadata, OpenGraph and Schema.org -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page not found | Leen  Alzebdeh</title>
+    <title>Language Models | Leen  Alzebdeh</title>
     <meta name="author" content="Leen  Alzebdeh">
-    <meta name="description" content="Looks like there has been a mistake. Nothing exists here.">
+    <meta name="description" content="We create n-gram language models that quantify the likelihood of various sound sequences occurring in the English language.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -34,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://leenzebdeh.github.io/404.html">
+    <link rel="canonical" href="https://leenzebdeh.github.io/projects/NLP_third/">
     
     <!-- Dark Mode -->
     
@@ -107,12 +106,108 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Page not found</h1>
-            <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+            <h1 class="post-title">Language Models</h1>
+            <p class="post-description">We create n-gram language models that quantify the likelihood of various sound sequences occurring in the English language.</p>
           </header>
 
           <article>
-            <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="/">here</a>.</p>
+            <p><a href="https://github.com/Leen-Alzebdeh/NLP-LMs" rel="external nofollow noopener" target="_blank">Link to the GitHub repo</a></p>
+
+<h2 id="data">Data</h2>
+<p>Input data: We leverage the transformed data from the <a href="https://github.com/Leen-Alzebdeh/NLP-Data-Cleaning-Task" rel="external nofollow noopener" target="_blank">data cleaning task</a>.</p>
+
+<p>The original data comes from <a href="https://childes.talkbank.org/" rel="external nofollow noopener" target="_blank">Child Language Data Exchange System (CHILDES Talkbank)</a></p>
+
+<p>The data contains transcripts from oral language that represent the language that young children are exposed to in everyday settings. The transformed data is stored in .txt files.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NLP-LMs/
+├─ transformed/
+│  ├─ Bates
+│  │  ├─ Free20
+│  │  │  ├─ amy.txt
+│  │  │  ├─ betty.txt
+│  │  │  ├─ (more files)
+│  │  ├─ (more directories)
+│  ├─ (more directories)
+</code></pre></div></div>
+
+<p>Example of a sequence: “HH AH L OW W ER L D” (hello world)</p>
+
+<h3 id="data-splits">Data Splits</h3>
+<p>The training and dev sets should be put under <code class="language-plaintext highlighter-rouge">data/.</code> In other words, two files <code class="language-plaintext highlighter-rouge">data/training.txt</code> and <code class="language-plaintext highlighter-rouge">data/dev.txt</code> need to be in the repository.</p>
+
+<h2 id="tasks">Tasks</h2>
+<h3> Task 1: Training N-gram Models </h3>
+<ul>
+  <li>We trained n-gram language models: unigram, bigram, and trigram models using the training set described above.</li>
+</ul>
+<h3>Task 2: Evaluating N-gram Models</h3>
+<ul>
+  <li>After building the models and implementing the smoothing techniques, we evaluated them by computing the perplexity (PPL) of the dev set.</li>
+</ul>
+<h3> Additional Task: KenLM </h3>
+<ul>
+  <li>Use KenLM to train the same bigram and trigram models using the same training data.</li>
+</ul>
+
+<h1 id="report-and-results">Report and Results</h1>
+<p>Further details and results can be found <a href="https://github.com/Leen-Alzebdeh/NLP-LMs/blob/main/REPORT.md" rel="external nofollow noopener" target="_blank">here</a></p>
+
+<h1 id="contributors">Contributors</h1>
+
+<p>Leen Alzebdeh @Leen-Alzebdeh</p>
+
+<p>Sukhnoor Khehra @Sukhnoor-K</p>
+
+<h2 id="resources-consulted">Resources Consulted</h2>
+
+<p>https://www.semanticscholar.org/paper/KenLM%3A-Faster-and-Smaller-Language-Model-Queries-Heafield/883d1d06d857a85a0e64bb19f0b17d56f2cc9d7b (Understanding KenLM challenges and limitations)</p>
+
+<p>https://stackoverflow.com/questions/38151445/iterate-over-n-successive-elements-of-list-with-overlapping (For understanding overlapping)</p>
+
+<p>GitHub Copilot</p>
+
+<h2 id="libraries">Libraries</h2>
+
+<p>We run this project using standard Python libraries: argparse, itertools, os, random, math, sys.</p>
+
+<h1 id="instructions-to-execute-code">Instructions to execute code</h1>
+
+<ol>
+  <li>
+    <p>Ensure Python is installed, as well as the Python Standard Library.</p>
+  </li>
+  <li>
+    <p>Ensure you have the transformed CHILDES input data in the format outlined above and in a directory ‘Data/’
+Example usage:</p>
+  </li>
+</ol>
+
+<p>Use the following commands in the current directory.</p>
+
+<p>For unigram:</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3 src/main.py unigram data/training.txt data/dev.txt</code></p>
+
+<p>For bigram smoothed:</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3 src/main.py bigram data/training.txt data/dev.txt --laplace</code></p>
+
+<p>For bigram unsmoothed:</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3 src/main.py bigram data/training.txt data/dev.txt</code></p>
+
+<p>For trigram smoothed:</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3 src/main.py trigram data/training.txt data/dev.txt --laplace</code></p>
+
+<p>For trigram unsmoothed:</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3 src/main.py trigram data/training.txt data/dev.txt</code></p>
+
+<p>To change the text file to evaluate preplexity on, for example to evaluate on data/training.txt (for unigram):</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3 src/main.py unigram data/training.txt data/training.txt</code></p>
 
           </article>
 

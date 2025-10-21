@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Digit Recognition with Machine Learning 🦆🦆🦆🦆🦆 | Leen  Alzebdeh</title>
+    <meta name="author" content="Leen  Alzebdeh">
+    <meta name="description" content="I implement a neural network for digit detection using the camera of the robot.">
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="" id="highlight_theme_light">
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://leenzebdeh.github.io/projects/412_lab5/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header --><header>
+
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Leen </span>Alzebdeh</a>
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">about</a>
+          </li>
+          <!-- Other pages -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/publications/">publications</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/projects/">projects</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/cv/">cv</a>
+          </li>
+
+          <!-- Toogle theme mode -->
+          <li class="toggle-container">
+            <button id="light-toggle" title="Change theme">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Scrolling Progress Bar -->
+  <progress id="progress" value="0">
+    <div class="progress-container">
+      <span class="progress-bar"></span>
+    </div>
+  </progress>
+</header>
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <!-- page.html -->
+        <div class="post">
+
+          <header class="post-header">
+            <h1 class="post-title">Digit Recognition with Machine Learning 🦆🦆🦆🦆🦆</h1>
+            <p class="post-description">I implement a neural network for digit detection using the camera of the robot.</p>
+          </header>
+
+          <article>
+            <p><a href="https://github.com/Leen-Alzebdeh/duckietown/tree/main/lab5" rel="external nofollow noopener" target="_blank">Link to the GitHub repo</a></p>
+
+<p><b> Contributors </b> <br>
+Leen Alzebdeh, Tural Bakhtiyarli and Tianming Han</p>
+
+<h2 id="objective">Objective</h2>
+
+<p> The main purpose of this exercise was to implement neural network to create a module for digit detection on AprilTags using the camera of our robots. We would also like to learn to run machine learning algorithm that handles the sensor input from robot from a remote laptop in real time, as this is a useful method to train/deploy an ML algorithm on a less powerful robot like the duckiebot. </p>
+
+<h2 id="backward-propogation">Backward Propogation</h2>
+
+<p>Target = 1.0</p>
+
+<p>Predicted (on pass 2) = 0.26</p>
+
+<p>Learning rate = 0.05</p>
+
+<p>Error Δ = 0.26 - 1 = - 0.74</p>
+
+<p>[w5 w6]<sup>T</sup> = [0.17 0.17]<sup>T</sup> - 0.05(-0.74)$[0.92 0.56]<sup>T</sup>
+= [0.20404 0.19072]<sup>T</sup> ≈ [0.20 0.19]<sup>T</sup></p>
+
+<p>[w1 w2, w3 w4]<sup>T</sup> = [0.12 0.23, 0.13 0.10]<sup>T</sup> - 0.05(-0.74)[2 3]<sup>T</sup>[0.170.17] = [0.13258 0.24887 , 0.14258 0.11887]<sup>T</sup> ≈ [0.13 0.25, 0.14 0.12]<sup>T</sup></p>
+
+<p>To get the new prediction:</p>
+
+<p>[2 3] [0.13 0.25, 0.14 0.12]<sup>T</sup> = [1.01 0.64] [0.20 0.19]<sup>T</sup> =[0.3236]</p>
+
+<p>New error Δ = 0.3236 - 1 = - 0.6764</p>
+
+<p>Summary:</p>
+
+<p>[w5 w6] = [0.20 0.19]</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>w1 w3</td>
+      <td> </td>
+      <td>0.13 0.25</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>w2 w4</td>
+      <td>=</td>
+      <td>0.14 0.12</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="background">Background</h2>
+
+<p> In the last exercise, we implemented autonomous lane following, where the Duckiebot can stay inside the lane while driving straight, and localize its position in the world using AprilTags. In this exercise we need a map in order to know the legal turns at an intersection, therefore we also included our AprilTag detection code from last exercise. </p>
+
+<h2 id="neural-network-implementation">Neural Network Implementation</h2>
+
+<ol>
+
+<li>Data augmentations used are:
+
+<ul>
+<li>
+<ul>
+
+<li>Randomly rotating the images</li>
+
+<li>Artificially making the pictures bigger and then cropping</li>
+
+<li>Normalizing the data</li>
+
+</ul>
+</li>
+
+<li>Without the data augmentation, the accuracy of the model is decreased and it may face overfitting.</li>
+</ul>
+</li>
+
+<li>The batch size in the code is 64. Higher batch size can lower the run time and reduce the noise in the data by averaging the gradient over a number of data points. On the other hand, lower batch size can prevent overfitting and be better for generalization as the model updates more frequently. The benefit of large batch size usually comes from its high degree of parallelism, where we can train the model over more samples without incurring much time cost via GPU or CPU vector operations, but changing batch sizes may require other hyper-parameters like learning rate etc. to be re-tuned.</li>
+
+<li>The activation function is the ReLU function, which is max(0,x), where x is the weighted sum of inputs to that neuron. This way, our model doesn’t have to deal with negative values, therefore leading to more accurate results and less error for training and validation. However, when we use linear activation function, we will have negative values to work with.Furthermore, ReLU prevents vanishing gradients as well.</li>
+
+<li>The optimization algorithm in the code is the Adam algorithm. Data optimization helps us to minimize the error between the predicted output and the actual output, which results in a more accurate model to work with. The optimization is usually done with a gradient descent algorithm or one of its variant.</li>
+
+<li>Adding dropout in the training causes some neurons not to be used in some stochastic manner. This results in redundancies in the use of neurons and therefore more robust neural networks.</li>
+
+</ol>
+
+<p>Below shows the training result of ReLU vs. Linear Activation.</p>
+
+<div class="row">
+  <div class="column">
+    <img src="../../assets/img/412_lab5/2.png" style="width:100%">
+    <div class="caption">
+    <b>Running with ReLU Activation</b>
+    </div>
+  </div>
+  <div class="column">
+    <img src="../../assets/img/412_lab5/3.png" style="width:100%">
+    <div class="caption">
+    <b>Running with Linear Activation Activation</b>
+    </div>
+  </div>
+</div>
+
+<h2 id="methods">Methods</h2>
+
+<p><br><b> Cropping the Digit </b> <br></p>
+
+<p>The first challenge to recognize the digit is to find the place in the camera image where the digit is located. As the model we train is a classifier that takes in a square image of the digit, we look for a way to crop a bound box of the digit. To do this, we utilize the AprilTag detection: whenever a tag is detected, we use the center of the detected tag as a reference and look for the digit above it.</p>
+
+<p>Given the digit’s rough position, we still need a way to find the digit while making sure not mistaking the darker environment as part of the black digit. The first approach we try is to use a black color mask to get the digit from the tag. However this easily mistakes the edges of the tag as part of the digit itself. We then try to use a blue mask and look for the contour surrounding the digit, and then get the inner contour as the digit image. However, this is still unreliable because the algorithm sometimes does not recognize the darker part of the blue sticker as part of the blue contour, which creates a ‘path’ from the digit and the edge of the sticker. The result is that there is no inner contour because the contour is disconnected.</p>
+
+<p>After a while we realized we can combine the two methods: first use the blue contour to get a bound box for the digit accurately, then use black contour to carve out the digit. The result image still have some noisy lines and dots around the edges, but this can be dealt with by only taking the center ellipse of the 28 * 28 image and masking off the faraway part of the image. We tested the resulting algorithm, and found it running reliably as long as the image does not have too much motion blur.</p>
+
+<p><br><b> Collecting Data </b> <br></p>
+
+<p>In order to train a model to run in real world, we need to first make sure we get a reasonable model that can run well in limited setting e.g. on a few camera images taken by the camera on the robot. This is done by recording a rosbag as the robot travels around and using OpenCV to display and select digit images manually. After manually selecting digits through, we collect 134 images of a handful of digits (retrospectively a oversight is that it does not include images for challenging digits like ‘1’ ) from a single rosbag and use them as a test set.</p>
+
+<p>We use tensorflow as our tool to train an Multi-layer Perceptron(MLP) network on the MNIST dataset. First run of the model unfortunately fails on the 134 images test set despite having a 97% on the MNIST test set, having less than 50% accuracy. We then discovered that the accuracy is significantly improved if the training images in MNIST are artificially made thicker using cv2.dilate() function, and improved further when we add TMNIST into the training set: We discovered that MNIST is not a good choice for our task, and found a dataset of computer rendered digits which is the TMNIST (link below in reference section) dataset. After making these changes, the model is able to recognize ~110 of the 134 images correctly.</p>
+
+<p>We then collected more digits by recording a rosbag to the cropped digit image topic and labelling them automatically by the AprilTag id they are on. The result are overall 1300+ of the ten digits. Training on these images yields a model that is able to correctly classify 128 of the 134 images. With some fine-tuning on those images following the Tensorflow tutorial on fine-tuning, the best result we are able to achieve is 132 image correctly classified out of 134 images.</p>
+
+<p><br><b> Deploying the Model </b> <br></p>
+
+<p>We wrote a digit detection node on our laptop and run it through -R option. The node subscribes to the cropped digit image (labelled with a seq number to identify which tag they are from) and publishes a string “[seq] [detection_result]” back to the robot’s ml_node which detects AprilTags and keeps track of all the digits.</p>
+
+<p>Running the node without lane following, we found that the model is able to identify the numbers on the tags most of the times, as demonstrated by the photos below.</p>
+
+<div class="row">
+  <div class="column">
+    <img src="../../assets/img/412_lab5/4.jpg" style="width:100%">
+    <div class="caption">
+    <b>Detection image showing detected digit</b>
+The digit on the tag is the most occurred digit i.e. if a tag's digit is detected twice as 1 and once as 3 then it will be displayed as a 1.
+    </div>
+  </div>
+
+  <div class="column">
+    <img src="../../assets/img/412_lab5/5.jpg" style="width:100%">
+    <div class="caption">
+    <b>Remote classifier terminal output</b>
+This image is taken from the terminal running classifier with -R option. Each line shows the detection result for the digit for a single frame. The digit 7 is correctly recognized every time.
+   </div>
+  </div>
+</div>
+
+<p>We then decide to run the lane following node together with the digit recognition, and we get the following video:</p>
+
+<div class="row justify-content-md-center">
+    <video width="320" height="240" controls="">
+    <source src="../../assets/vid/412_lab5/part6.mp4" type="video/mp4"></source>
+        Your browser does not support the video tag.
+    </video>
+</div>
+<div class="caption">
+    Video 1. Recognizing All Ten Digits Using Camera:
+  In this video the duckiebot goes around and recognize digits on AprilTags, until all 10 digits are at least recognized 3 times. The most recognized digit for each tag is shown in the camera feed in rviz.
+
+Note the camera feed does not show the most recent recognition result i.e. a tag is initialized to display 0 as its digit if no recognition has been done. Use the top-right terminal output to see the most recent detected digit.
+
+</div>
+
+<h2 id="results">Results</h2>
+
+<p>After doing multiple test runs, we came into conclusion that the ML program worked well with most of the digits from most angles. Therefore, our program is mostly reliable under test circumstances. The accuracy of the program when tested with data from MNIST was 94%. The accuracy of the program when tested with the actual targets feels like around 85%.</p>
+
+<h2 id="challenges-that-we-faced">Challenges that We Faced</h2>
+
+<p>One of the challenges we were facing was differentiating “1” and “7” from each other in the duckietown. As the top part of “7” in the Duckietown was tilted down, our program was sometimes confusing it with “1”. So, we had to take out “7” and place it back in a better position, which worked. Another issue that we faced was that the duckiebot was confusing the target digit with other digits, because it was still far away from the AprilTag and wasn’t close enough to make the right decision. However, we fixed this issue by calculating the distance between the AprilTag and the duckiebot. Then we used this information to limit the distance necessary for making correct decisions on the classification of the digits.</p>
+
+<p>The two biggest unexpected challenge in this exercise were reliable turning at intersections and transformation broadcast. While we planned to use previous assignments and reference solutions for these parts at the start, it took a lot more time than we expected to integrate those code and debugging, and even in the final delivery these parts are still not as good as we’d like them to be (e.g. the odometry is not updating while we driving with deadreckoning).</p>
+
+<p>Another unexpected challenge for us is the need to manually tune a model. Going into this assignment I had the impression that this assignment is focused on evaluating the existing MLP model (i.e. take the Google Colab script and run the result model on the robot) instead of training one from collected data. As a result we did not plan on spending time collecting data in the lab at the start.</p>
+
+<h2 id="references">References</h2>
+
+<p>MPL notebook <a href="https://eclass.srv.ualberta.ca/mod/resource/view.php?id=6964261" rel="external nofollow noopener" target="_blank">https://eclass.srv.ualberta.ca/mod/resource/view.php?id=6964261</a><br>
+Tensorflow Documentation: <a href="https://www.tensorflow.org/api_docs/python/tf" rel="external nofollow noopener" target="_blank">https://www.tensorflow.org/api_docs/python/tf</a><br>
+Tensorflow Fine-tuning <a href="ttps://www.tensorflow.org/tutorials/images/transfer_learning#un-freeze_the_top_layers_of_the_model">https://www.tensorflow.org/tutorials/images/transfer_learning#un-freeze_the_top_layers_of_the_model</a><br>
+AprilTag library: <a href="ttps://github.com/duckietown/lib-dt-AprilTags">https://github.com/duckietown/lib-dt-AprilTags</a><br>
+Compressed Image ROS: <a href="http://wiki.ros.org/rospy_tutorials/Tutorials/WritingImagePublisherSubscriber" rel="external nofollow noopener" target="_blank">http://wiki.ros.org/rospy_tutorials/Tutorials/WritingImagePublisherSubscriber</a><br>
+(Computer rendered) digit recognition with CNN: <a href="https://stackoverflow.com/questions/38389785/digit-recognition-on-cnn" rel="external nofollow noopener" target="_blank">https://stackoverflow.com/questions/38389785/digit-recognition-on-cnn</a><br>
+Typeface MNIST dataset: <a href="https://www.kaggle.com/datasets/7a2a5621ee8c66c1aba046f9810a79aa27aafdbbe5d6a475b861d2ba8552d1fc" rel="external nofollow noopener" target="_blank">https://www.kaggle.com/datasets/7a2a5621ee8c66c1aba046f9810a79aa27aafdbbe5d6a475b861d2ba8552d1fC</a><br></p>
+
+          </article>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2025 Leen  Alzebdeh. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script defer src="/assets/js/common.js"></script>
+
+    
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    
+    
+
+<!-- Scrolling Progress Bar -->
+<script type="text/javascript">
+  /*
+   * This JavaScript code has been adapted from the article 
+   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
+   * published on the website https://css-tricks.com on the 7th of May, 2014.
+   * Couple of changes were made to the original code to make it compatible 
+   * with the `al-foio` theme.
+   */
+  const progressBar = $("#progress");
+  /*
+   * We set up the bar after all elements are done loading.
+   * In some cases, if the images in the page are larger than the intended
+   * size they'll have on the page, they'll be resized via CSS to accomodate
+   * the desired size. This mistake, however, breaks the computations as the
+   * scroll size is computed as soon as the elements finish loading.
+   * To account for this, a minimal delay was introduced before computing the
+   * values.
+   */
+  window.onload = function () {
+    setTimeout(progressBarSetup, 50);
+  };
+  /*
+   * We set up the bar according to the browser.
+   * If the browser supports the progress element we use that.
+   * Otherwise, we resize the bar thru CSS styling
+   */
+  function progressBarSetup() {
+    if ("max" in document.createElement("progress")) {
+      initializeProgressElement();
+      $(document).on("scroll", function() {
+        progressBar.attr({ value: getCurrentScrollPosition() });
+      });
+      $(window).on("resize", initializeProgressElement);
+    } else {
+      resizeProgressBar();
+      $(document).on("scroll", resizeProgressBar);
+      $(window).on("resize", resizeProgressBar);
+    }
+  }
+  /*
+   * The vertical scroll position is the same as the number of pixels that
+   * are hidden from view above the scrollable area. Thus, a value > 0 is
+   * how much the user has scrolled from the top
+   */
+  function getCurrentScrollPosition() {
+    return $(window).scrollTop();
+  }
+
+  function initializeProgressElement() {
+    let navbarHeight = $("#navbar").outerHeight(true);
+    $("body").css({ "padding-top": navbarHeight });
+    $("progress-container").css({ "padding-top": navbarHeight });
+    progressBar.css({ top: navbarHeight });
+    progressBar.attr({
+      max: getDistanceToScroll(),
+      value: getCurrentScrollPosition(),
+    });
+  }
+  /*
+   * The offset between the html document height and the browser viewport
+   * height will be greater than zero if vertical scroll is possible.
+   * This is the distance the user can scroll
+   */
+  function getDistanceToScroll() {
+    return $(document).height() - $(window).height();
+  }
+
+  function resizeProgressBar() {
+    progressBar.css({ width: getWidthPercentage() + "%" });
+  }
+  // The scroll ratio equals the percentage to resize the bar
+  function getWidthPercentage() {
+    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
+  }
+</script>
+
+  </body>
+</html>

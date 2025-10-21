@@ -3,17 +3,16 @@
 
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=/">    <!-- Metadata, OpenGraph and Schema.org -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page not found | Leen  Alzebdeh</title>
+    <title>Grammar Checker | Leen  Alzebdeh</title>
     <meta name="author" content="Leen  Alzebdeh">
-    <meta name="description" content="Looks like there has been a mistake. Nothing exists here.">
+    <meta name="description" content="We write a grammar and a parser to parse the POS tag sequence.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -34,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://leenzebdeh.github.io/404.html">
+    <link rel="canonical" href="https://leenzebdeh.github.io/projects/NLP_second/">
     
     <!-- Dark Mode -->
     
@@ -107,12 +106,107 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Page not found</h1>
-            <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+            <h1 class="post-title">Grammar Checker</h1>
+            <p class="post-description">We write a grammar and a parser to parse the POS tag sequence.</p>
           </header>
 
           <article>
-            <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="/">here</a>.</p>
+            <p><a href="https://github.com/Leen-Alzebdeh/NLP-Grammar-Checker" rel="external nofollow noopener" target="_blank">Link to the GitHub repo</a></p>
+
+<h2 id="data">Data</h2>
+<p>Input data: sentences with POS tags
+  The input is a tsv (tab-separated values) file like the sample:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  |id|label|sentence|pos|
+  | -|-----|--------|---|
+  |73|0|Many thanks in advance for your cooperation .| JJ NNS IN NN IN PRP$ NN .| 74| 1| At that moment we saw the bus to come .|IN DT NN PRP VBD DT NN TO VB .|
+</code></pre></div></div>
+<p><br>
+The id column is the unique id for each sentence. The label column indicates whether a sentence contains grammar errors (1 means having errors and 0 means error-free). The pos column contains the POS tags for each token in the sentence, also separated by a single space.</p>
+
+<p>The POS tags follow the Penn Treebank (PTB) tagging scheme, described <a href="https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html" rel="external nofollow noopener" target="_blank">here</a></p>
+<h2 id="tasks">Tasks</h2>
+
+<h3> Task 1: Building a toy grammar</h3>
+<ul>
+  <li> We wrote a toy CFG for English in NLTK’s .cfg format. </li>
+  </ul>
+<h3> Task 2: Constituency parsing</h3>
+<ul>
+  <li>We used the chart parser from NLTK to parse each of the POS sequences in the dataset with the toy grammar we wrote in task 1. We stored results in a TSV  file with three columns:</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column name</th>
+      <th>Description</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>The id of the input sentence.</td>
+      <td>ground_truth</td>
+      <td>The ground truth label of the input sentence, copied from the dataset.</td>
+    </tr>
+    <tr>
+      <td>prediction</td>
+      <td>1 if the sentence has grammar errors, 0 if not. In other words, whether the POS sequence can be parsed successfully with your grammar and parser.</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="task-3-evaluation-and-error-analysis">Task 3: Evaluation and error analysis</h3>
+<ul>
+  <li>We evaluate the performance of our grammar checker by calculating its precision and recall on the data available to us. To do that, we compared the prediction of our system on a given sentence and its corresponding label in the dataset.</li>
+</ul>
+
+<h1 id="report-and-results">Report and Results</h1>
+<p>Further details and results can be found <a href="https://github.com/Leen-Alzebdeh/NLP-Grammar-Checker/blob/main/REPORT.md" rel="external nofollow noopener" target="_blank">here</a></p>
+
+<h1 id="contributors">Contributors</h1>
+
+<p>Leen Alzebdeh  @Leen-Alzebdeh</p>
+
+<p>Sukhnoor Khehra @Sukhnoor-K</p>
+
+<h1 id="resources-consulted">Resources Consulted</h1>
+
+<p><a href="https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html" rel="external nofollow noopener" target="_blank">Penn Treebank P.O.S. Tags</a></p>
+
+<p>Jurafsky, D., &amp; Martin, J. H. (2009). Speech and language processing: An introduction to natural language processing, computational linguistics, and speech recognition. Pearson Prentice Hall.</p>
+
+<p>GitHub Copilot</p>
+
+<h2 id="libraries">Libraries</h2>
+
+<p>We run this project using standard Python libraries csv, sys, nltk.</p>
+
+<h1 id="instructions-to-execute-code">Instructions to execute code</h1>
+
+<ol>
+  <li>
+    <p>Ensure Python is installed, as well as the Python Standard Library.</p>
+  </li>
+  <li>
+    <p>Ensure the library nltk is installed, it can be installed using the following command:</p>
+  </li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">pip install --user -U nltk</code></p>
+
+<ol>
+  <li>Ensure you have input data in the format outlined above and in a file ‘data/train.tsv’</li>
+</ol>
+
+<p>Example usage: use the following command in the current directory.</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3 src/main.py data/train.tsv grammars/toy.cfg output/train.tsv</code></p>
+
 
           </article>
 

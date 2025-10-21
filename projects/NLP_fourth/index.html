@@ -3,17 +3,16 @@
 
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=/">    <!-- Metadata, OpenGraph and Schema.org -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page not found | Leen  Alzebdeh</title>
+    <title>POS Taggers | Leen  Alzebdeh</title>
     <meta name="author" content="Leen  Alzebdeh">
-    <meta name="description" content="Looks like there has been a mistake. Nothing exists here.">
+    <meta name="description" content="We compare, and contrast two part-of-speech taggers’ (HMM and Brill) performance on in-domain and out-of-domain text samples. ">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -34,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://leenzebdeh.github.io/404.html">
+    <link rel="canonical" href="https://leenzebdeh.github.io/projects/NLP_fourth/">
     
     <!-- Dark Mode -->
     
@@ -107,12 +106,99 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Page not found</h1>
-            <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+            <h1 class="post-title">POS Taggers</h1>
+            <p class="post-description">We compare, and contrast two part-of-speech taggers’ (HMM and Brill) performance on in-domain and out-of-domain text samples. </p>
           </header>
 
           <article>
-            <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="/">here</a>.</p>
+            <p><a href="https://github.com/Leen-Alzebdeh/NLP-Taggers" rel="external nofollow noopener" target="_blank">Link to the GitHub repo</a></p>
+
+<h2 id="data">Data</h2>
+<p>Input data: POS tagged sentences from <a href="http://corpling.uis.georgetown.edu/gum/" rel="external nofollow noopener" target="_blank">The Georgetown University Multilayer Corpus (GUM)</a></p>
+
+<p>The training and test files have a .txt format. Each line has a word and POS tag and each sentence is separated by an empty line.Below is an example of the structure:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Always	 RB
+  wear VB
+  ballet NN
+  slippers NNS
+  . .
+  
+  Stretch VB
+  your PRP$
+  ...
+</code></pre></div></div>
+<p>The training data is under <code class="language-plaintext highlighter-rouge">data/train.txt</code> <br>
+The in-domain test data is under <code class="language-plaintext highlighter-rouge">data/test.txt</code> <br>
+The out-of-domain test data is under <code class="language-plaintext highlighter-rouge">data/test_ood.txt</code> <br>
+The POS tags follow the Penn Treebank (PTB) tagging scheme, described <a href="https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html" rel="external nofollow noopener" target="_blank">here</a></p>
+<h2 id="tasks">Tasks</h2>
+<h3 id="task-1-train-and-tune-the-taggers">Task 1: Train and Tune the Taggers</h3>
+<ul>
+  <li>We trained the HMM and Brill tagger on the training set and tuned each to find the best performance.</li>
+</ul>
+
+<h3 id="task-2-compare-results">Task 2: Compare results</h3>
+<ul>
+  <li>We measured the performance of the taggers on in-domain and out-of-domain test sets.</li>
+</ul>
+
+<h3 id="output">Output</h3>
+<p>The program’s output file is a .txt file in the same format as the input training file.</p>
+
+<h1 id="report-and-results">Report and Results</h1>
+<p>Further details and results can be found <a href="https://github.com/Leen-Alzebdeh/NLP-Taggers/blob/main/REPORT.md" rel="external nofollow noopener" target="_blank">here</a></p>
+
+<h1 id="contributors">Contributors</h1>
+
+<p>Leen Alzebdeh  @Leen-Alzebdeh</p>
+
+<p>Sukhnoor Khehra @Sukhnoor-K</p>
+
+<h1 id="resources-consulted">Resources Consulted</h1>
+
+<ul>
+  <li>https://gist.github.com/blumonkey/007955ec2f67119e0909</li>
+  <li>https://stats.stackexchange.com/questions/366552/nlp-various-probabilities-estimators-in-nltk</li>
+  <li>https://www.nltk.org/_modules/nltk/tag/hmm.html</li>
+  <li>https://gist.github.com/h-alg/4ec991f90a682c6d0a0b</li>
+  <li>https://www.nltk.org/_modules/nltk/tag/brill.html</li>
+  <li>https://www.nltk.org/api/nltk.tag.brill_trainer.html</li>
+  <li>Github Copilot</li>
+</ul>
+
+<h2 id="libraries">Libraries</h2>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">main.py L:4, 13</code> used <code class="language-plaintext highlighter-rouge">argparse</code> for extracting command line args.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">main.py L:8, 104</code> used <code class="language-plaintext highlighter-rouge">os</code> for creating directory of output.</li>
+</ul>
+
+<h1 id="instructions-to-execute-code">Instructions to execute code</h1>
+
+<ol>
+  <li>
+    <p>Ensure Python is installed, as well as the Python Standard Library. To download Python if it is not already installed, follow the instructions on the following website: <a href="https://www.python.org/downloads/" rel="external nofollow noopener" target="_blank">https://www.python.org/downloads/</a>.</p>
+  </li>
+  <li>
+    <p>Ensure you have training and test input data in the format outlined above and in a directory ‘data/’
+Example usage: use the following commands in the current directory.</p>
+  </li>
+</ol>
+
+<p>For using the HMM tagger on in-domain data:
+<code class="language-plaintext highlighter-rouge">python3 src/main.py --tagger hmm --train data/train.txt --test data/test.txt --output output/test_hmm.txt</code></p>
+
+<p>For using the HMM tagger in out-of-domain data:
+<code class="language-plaintext highlighter-rouge">python3 src/main.py --tagger hmm --train data/train.txt --test data/test_ood.txt --output output/test_ood_hmm.txt</code></p>
+
+<p>For using the Brill tagger on in-domain data:
+<code class="language-plaintext highlighter-rouge">python3 src/main.py --tagger brill --train data/train.txt --test data/test.txt --output output/test_brill.txt</code></p>
+
+<p>For using the Brill tagger on out-of-domain data:
+<code class="language-plaintext highlighter-rouge">python3 src/main.py --tagger brill --train data/train.txt --test data/test_ood.txt --output output/test_ood_brill.txt</code></p>
+
 
           </article>
 

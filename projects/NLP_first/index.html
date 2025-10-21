@@ -3,17 +3,16 @@
 
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=/">    <!-- Metadata, OpenGraph and Schema.org -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page not found | Leen  Alzebdeh</title>
+    <title>Data Cleanig Task | Leen  Alzebdeh</title>
     <meta name="author" content="Leen  Alzebdeh">
-    <meta name="description" content="Looks like there has been a mistake. Nothing exists here.">
+    <meta name="description" content="We explore the use of regular expressions to clean input text in support of a downstream task.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -34,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://leenzebdeh.github.io/404.html">
+    <link rel="canonical" href="https://leenzebdeh.github.io/projects/NLP_first/">
     
     <!-- Dark Mode -->
     
@@ -107,12 +106,91 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Page not found</h1>
-            <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+            <h1 class="post-title">Data Cleanig Task</h1>
+            <p class="post-description">We explore the use of regular expressions to clean input text in support of a downstream task.</p>
           </header>
 
           <article>
-            <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="/">here</a>.</p>
+            <p><a href="https://github.com/Leen-Alzebdeh/NLP-Data-Cleaning-Task" rel="external nofollow noopener" target="_blank">Link to the GitHub repo</a></p>
+
+<p>We explore the use of regular expressions to clean input text in support of a downstream task found <a href="https://leenzebdeh.github.io/projects/NLP_third/" rel="external nofollow noopener" target="_blank">here</a>.</p>
+
+<h2 id="data">Data</h2>
+<p>Input data: <a href="https://childes.talkbank.org/" rel="external nofollow noopener" target="_blank">Child Language Data Exchange System (CHILDES Talkbank)</a></p>
+
+<p>The data contains transcripts from oral language that represent the language that young children are exposed to in everyday settings. The data is stored in .cha files.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NLP-Data-Cleaning-Task/
+├─ Data/
+│  ├─ Bates
+│  │  ├─ Free20
+│  │  │  ├─ amy.cha
+│  │  │  ├─ betty.cha
+│  │  │  ├─ (more files)
+│  │  ├─ (more directories)
+│  ├─ (more directories)
+</code></pre></div></div>
+
+<h2 id="tasks">Tasks</h2>
+
+<h3> Task 1: clean the files: </h3>
+<ul>
+  <li>Convert the files to raw text and remove both the header and extraneous information. Extraneous information is any information that is not needed to support the downstream task.</li>
+</ul>
+<h3> Task 2:  transform the files: </h3>
+<ul>
+  <li>You will transform the data so that it uses ArpaBET to represent the sounds that the text maps to. We use<a href="https://www.google.com/url?q=http://www.speech.cs.cmu.edu/cgi-bin/cmudict&amp;sa=D&amp;source=docs&amp;ust=1703650680785817&amp;usg=AOvVaw2B2-NioT8l2i6wmOWx3Cwk" rel="external nofollow noopener" target="_blank"> CMU’s Pronunciation Dictionary</a> to inform this transformation.</li>
+</ul>
+
+<h1 id="report">Report</h1>
+<p>Further details and justifications can be found <a href="https://github.com/Leen-Alzebdeh/NLP-Data-Cleaning-Task/blob/main/REPORT.md" rel="external nofollow noopener" target="_blank">here</a>.</p>
+
+<h1 id="contributors">Contributors</h1>
+
+<p>Leen Alzebdeh  @Leen-Alzebdeh</p>
+
+<p>Sukhnoor Khehra @Sukhnoor-K</p>
+
+<h1 id="resources-consulted">Resources Consulted</h1>
+
+<p><a href="https://www.w3schools.com/python/python_regex.asp" rel="external nofollow noopener" target="_blank">https://www.w3schools.com/python/python_regex.asp</a></p>
+
+<p>Jurafsky, D., &amp; Martin, J. H. (2009). Speech and language processing: An introduction to natural language processing, computational linguistics, and speech recognition. Pearson Prentice Hall.</p>
+
+<p><a href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict?in=Hello#phones" rel="external nofollow noopener" target="_blank">CMU’s Pronunciation Dictionary</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/ARPABET" rel="external nofollow noopener" target="_blank">ARPABET</a></p>
+
+<p><a href="https://childes.talkbank.org/" rel="external nofollow noopener" target="_blank">Child Language Data Exchange System (CHILDES Talkbank)</a></p>
+
+<p><a href="https://stackoverflow.com/questions/16510017/how-to-use-regular-expressions-do-reverse-search" rel="external nofollow noopener" target="_blank">https://stackoverflow.com/questions/16510017/how-to-use-regular-expressions-do-reverse-search</a></p>
+
+<p><a href="https://stackoverflow.com/questions/3114252/one-liner-to-check-whether-an-iterator-yields-at-least-one-element" rel="external nofollow noopener" target="_blank">https://stackoverflow.com/questions/3114252/one-liner-to-check-whether-an-iterator-yields-at-least-one-element</a></p>
+
+<p>GitHub Copilot</p>
+
+<h3 id="libraries">Libraries</h3>
+
+<p>We run this project using standard Python libraries re (regex), random, and os.</p>
+
+<h1 id="instructions-to-execute-code">Instructions to execute code</h1>
+
+<p>To run this project:</p>
+<ol>
+  <li>Ensure Python is installed, as well as the Python Standard Library.</li>
+  <li>Clone the repository.</li>
+  <li>Ensure you have CHILDES input data in the format outlined above and in a directory ‘Data/’</li>
+  <li>Run the main.py file (no parameters needed).
+Run this command
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>python3 src/main.py
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Clean files can be found within the <code class="language-plaintext highlighter-rouge">clean/</code> directory found in root.</p>
+
+<p>Transformed files can be found within the <code class="language-plaintext highlighter-rouge">transformed/</code> directory found in root.</p>
+
 
           </article>
 

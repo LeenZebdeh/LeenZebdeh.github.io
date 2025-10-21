@@ -3,17 +3,16 @@
 
   <!-- Head -->
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="refresh" content="3; url=/">    <!-- Metadata, OpenGraph and Schema.org -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
     
 
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page not found | Leen  Alzebdeh</title>
+    <title>Relation Extraction &amp; Classification | Leen  Alzebdeh</title>
     <meta name="author" content="Leen  Alzebdeh">
-    <meta name="description" content="Looks like there has been a mistake. Nothing exists here.">
+    <meta name="description" content="We classify the relation between head and tail entity using a Naive Bayes model based on bag-of-words (BoW) features.">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -34,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://leenzebdeh.github.io/404.html">
+    <link rel="canonical" href="https://leenzebdeh.github.io/projects/NLP_final/">
     
     <!-- Dark Mode -->
     
@@ -107,12 +106,116 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Page not found</h1>
-            <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+            <h1 class="post-title">Relation Extraction &amp; Classification</h1>
+            <p class="post-description">We classify the relation between head and tail entity using a Naive Bayes model based on bag-of-words (BoW) features.</p>
           </header>
 
           <article>
-            <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="/">here</a>.</p>
+            <p><a href="https://github.com/Leen-Alzebdeh/NLP-Relation-Extraction-Classification" rel="external nofollow noopener" target="_blank">Link to the GitHub repo</a></p>
+
+<h2 id="data">Data</h2>
+
+<p>Input data: Two csv files: train.csv and test.csv, adapted from the <a href="https://www.aclweb.org/anthology/D18-1514" rel="external nofollow noopener" target="_blank">FewRel</a> dataset.
+Each csv file contains 5 columns:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Example</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>row_id</td>
+      <td>435</td>
+      <td>The unique row id.</td>
+    </tr>
+    <tr>
+      <td>tokens</td>
+      <td>Trapped and Deceived is a 1994 television film directed by Robert Iscove .</td>
+      <td>The tokenized sentence, separated by a single space.</td>
+    </tr>
+    <tr>
+      <td>relation</td>
+      <td>director</td>
+      <td>The correct relation (original label).</td>
+    </tr>
+    <tr>
+      <td>head_pos</td>
+      <td>0 1 2</td>
+      <td>Position of the head entity (Trapped and Deceived). Indices start with 0 and are separated by a single space.</td>
+    </tr>
+    <tr>
+      <td>tail_pos</td>
+      <td>11 12</td>
+      <td>Position of the tail entity (Robert Iscove).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="tasks">Tasks</h2>
+
+<h3 id="task-1-classify-text">Task 1: Classify Text</h3>
+
+<ul>
+  <li>We wrote a program that trains a Naive Bayes classifier for the 4-class classification problem at hand. It processes texts and classify them as belonging to one of the following classes: publisher, director, performer, and characters. The NB classifier is implemented from scratch.</li>
+  <li>The program should trains the model with the training file, and print the training accuracy (using 3-fold cross validation). After training the model, the program takes the test file as input, makes predictions using the model, writes the predictions to files, and prints the accuracy on the test set.</li>
+</ul>
+
+<h3 id="task-2-improve-the-classifier">Task 2: Improve the Classifier</h3>
+
+<ul>
+  <li>We did one round of improvements based on our error analysis.</li>
+</ul>
+
+<h3 id="output">Output</h3>
+
+<p>The output should be a csv file containing the following 3 columns in the same order: original_label, output_label, and row_id.</p>
+
+<h1 id="report-and-results">Report and Results</h1>
+
+<p>Further details and results can be found <a href="https://github.com/Leen-Alzebdeh/NLP-Relation-Extraction-Classification/blob/main/REPORT.md" rel="external nofollow noopener" target="_blank">here</a></p>
+
+<h1 id="contributors">Contributors</h1>
+
+<p>Leen Alzebdeh @Leen-Alzebdeh</p>
+
+<p>Sukhnoor Khehra @Sukhnoor-K</p>
+
+<h1 id="resources-consulted">Resources Consulted</h1>
+
+<ul>
+  <li>Chapter 4 of the Speech and Language Processing textbook.</li>
+  <li>Used ChatGPT to help write the top_mi_selection and calculate_mutual_information functions.</li>
+  <li>Used Github Copilot</li>
+</ul>
+
+<h2 id="libraries">Libraries</h2>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">main.py L:[line]</code> used <code class="language-plaintext highlighter-rouge">[Library Name]</code> for [reason].</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">main.py L:[5, 15]</code> used <code class="language-plaintext highlighter-rouge">argparse</code> for parsing command line arguments.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">main.py L:[75, 173]</code> used <code class="language-plaintext highlighter-rouge">csv</code> to read anf write csv files.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">main.py L[191] used</code> <code class="language-plaintext highlighter-rouge">random</code> to shuffle training data.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">main.py L[132, 137]</code> used <code class="language-plaintext highlighter-rouge">math</code> to find logs of probabilities.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">main.py L[56, 57]</code> used <code class="language-plaintext highlighter-rouge">statistics</code> to find the mean and standard deviation of the training accuracy.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">main.py L[103, 104, 117, 119, 150, 207]</code> used <code class="language-plaintext highlighter-rouge">collections</code> to use defaultdict.</li>
+</ul>
+
+<h1 id="instructions-to-execute-code">Instructions to execute code</h1>
+
+<p>Ensure Python is installed, as well as the Python Standard Library.</p>
+
+<p><strong>To run the improved mode, add the flag -i.</strong></p>
 
           </article>
 
